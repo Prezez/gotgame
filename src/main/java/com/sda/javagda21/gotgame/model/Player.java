@@ -15,8 +15,8 @@ public class Player {
     private String name;
 
 
-    private Gold gold;
+    private int gold;
 
-    private Army army;
-    private Integer turn;
+  //  private Army army;
+    private int turn;
 }
