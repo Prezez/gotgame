@@ -18,7 +18,7 @@ Technologies
     •	MySQL
     •	Hibernate
     •	Vaadin
-    •	Heraku
+    •	Heroku
     •	Github
 
 Authors
