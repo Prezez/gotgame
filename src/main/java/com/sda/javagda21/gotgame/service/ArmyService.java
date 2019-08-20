@@ -1,4 +1,4 @@
-package com.sda.javagda21.gotgame.service;
+package com.sda.javagda21.gotgame.Service;
 
 import com.sda.javagda21.gotgame.entity.Army;
 

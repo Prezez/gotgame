@@ -9,16 +9,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sda.javagda21</groupId>
-    <artifactId>gotgame</artifactId>
+    <artifactId>currency-game</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gotgame</name>
+    <name>currency-game</name>
     <description>Demo project for Spring Boot</description>
-
     <properties>
         <java.version>1.8</java.version>
         <vaadin.version>14.0.0</vaadin.version>
     </properties>
-
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-messaging -->
 
@@ -39,8 +37,9 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <groupId>org.springframework.security.oauth.boot</groupId>
+            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+            <version>2.1.4.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -50,16 +49,10 @@
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -68,7 +61,6 @@
         </dependency>
 
     </dependencies>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -80,7 +72,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <build>
         <plugins>
             <plugin>
@@ -89,5 +80,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
