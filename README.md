@@ -23,9 +23,9 @@ Technologies
 
 Authors
 
-    •	Dawid Procajło               
+    •	Dawid Procajło             <a href="https://www.linkedin.com/in/michalnormann" rel="nofollow">https://www.linkedin.com/in/michalnormann</a>  
     •	Katarzyna Zawisza         <a href="https://www.linkedin.com/in/damian-rybka-8269a868/">LINKID</a>
-    •	Tomasz Piotrowski         
+    •	Tomasz Piotrowski         https://www.linkedin.com/in/michalnormann
     •	Damian Rybka         
 
     •	supervision of : Przemysław Bykowski         
