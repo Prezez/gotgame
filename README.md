@@ -25,8 +25,8 @@ Authors
 
     •	Dawid Procajło               
     •	Katarzyna Zawisza         
-    •	Tomasz Piotrowski         
-    •	Damian Rybka    <url>https://www.linkedin.com/in/damian-rybka-8269a868/</url>        
+    •	Tomasz Piotrowski         <a href="https://www.linkedin.com/in/damian-rybka-8269a868/">opis odsyłacza</a>
+    •	Damian Rybka         
 
     •	supervision of : Przemysław Bykowski         
 
