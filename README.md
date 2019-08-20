@@ -24,7 +24,7 @@ Technologies
 Authors
 
     •	Dawid Procajło             
-    •	Katarzyna Zawisza         
+    •	Katarzyna Zawisza        [Github](https://www.linkedin.com/in/tomasz-piotrowski-088872156/)    
     •	Tomasz Piotrowski         
     •	Damian Rybka         
 
