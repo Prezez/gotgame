@@ -18,15 +18,15 @@ Technologies
     •	MySQL
     •	Hibernate
     •	Vaadin
-    •	Heraku
+    •	Heroku
     •	Github
 
 Authors
 
-    •	Dawid Procajło               
-    •	Katarzyna Zawisza         
+    •	Dawid Procajło             
+    •	Katarzyna Zawisza           
     •	Tomasz Piotrowski         
-    •	Damian Rybka                
+    •	Damian Rybka         
 
     •	supervision of : Przemysław Bykowski         
 
