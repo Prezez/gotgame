@@ -18,6 +18,7 @@ public class ArmyService {
 
     }
 
+
     public int takeDmg(int dmg, int size) {
         int kills = dmg / 3;
         System.out.println("number of kills: " + kills);
