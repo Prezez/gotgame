@@ -7,16 +7,8 @@ import com.vaadin.flow.router.Route;
 
 @Route("game")
 public class GameGui extends VerticalLayout {
-//    private ClassLoader targetLoader;
-//
-//    public GameGui(ClassLoader p) {
-//        this.targetLoader = Thread.currentThread().getContextClassLoader();
-//        if (this.targetLoader==null) {
-//            throw new IllegalStateException("Cannot set up custom class loader: No context class loader set");
-//        }
-//    }
-//
-//
+
+
 }
 
 

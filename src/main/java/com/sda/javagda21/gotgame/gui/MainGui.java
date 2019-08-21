@@ -18,7 +18,7 @@ public class MainGui extends VerticalLayout {
         Button exit = new Button("EXIT");
 
         start.addClickListener( e-> {
-            start.getUI().ifPresent(ui -> ui.navigate("game"));
+            start.getUI().ifPresent(ui -> ui.navigate("waiting-room"));
 
                 });
         add(label, start, options, ranking, exit);
