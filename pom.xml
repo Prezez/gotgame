@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sda.javagda21</groupId>
-    <artifactId>currency-game</artifactId>
+    <artifactId>gotgame</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>currency-game</name>
+    <name>gotgame</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>

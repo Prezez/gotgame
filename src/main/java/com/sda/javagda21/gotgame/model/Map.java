@@ -1,19 +1,33 @@
 package com.sda.javagda21.gotgame.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+@Component
 public class Map {
 
     public static final Integer MAX_SIZE = 4;
     public static final Integer MIN_SIZE = 1;
 
-    private Field[][] field;
+    private Field[][] fields;
 
-    public Map(Field[][] field) {
-        this.field = field;
+    public Map() {
+    }
+
+    public Map(Field[][] fields) {
+        this.fields = fields;
+    }
+
+    public Field[][] getFields() {
+        return fields;
+    }
+
+    public void setFields(Field[][] fields) {
+        this.fields = fields;
     }
 
     public Integer getFieldNumberFromFieldPosition(Integer verticalPosition, Integer horizontalPostion) {
@@ -64,10 +78,10 @@ public class Map {
                 Integer warriorNo = random.nextInt(20)+30;
                 Field newField = new Field(i * MAX_SIZE + j, null, warriorNo);
                 field[i][j] = newField;
-                System.out.println(newField);
+//                System.out.println(newField);
             }
         }
-        System.out.println(map);
+//        System.out.println(map);
 
         return map;
     }
@@ -75,7 +89,7 @@ public class Map {
     @Override
     public String toString() {
         return "Map{" +
-                "field=" + Arrays.toString(field) +
+                "fields=" + Arrays.toString(fields) +
                 '}';
     }
 }
