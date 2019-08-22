@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+@Entity(name = "army")
 public class Army {
 
     @Id
@@ -14,6 +14,9 @@ public class Army {
     private Long id;
 
     private int size;
+
+    public Army() {
+    }
 
     public Army(int size) {
         this.size = size;

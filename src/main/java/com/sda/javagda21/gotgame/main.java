@@ -2,7 +2,9 @@ package com.sda.javagda21.gotgame;
 
 import com.sda.javagda21.gotgame.model.Map;
 import com.sda.javagda21.gotgame.entity.Army;
-import com.sda.javagda21.gotgame.Service.ArmyService;
+import com.sda.javagda21.gotgame.service.ArmyService;
+
+import java.util.Arrays;
 
 public class main {
     public static void main(String[] args) {

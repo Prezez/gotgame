@@ -34,6 +34,12 @@ public class Map {
         return verticalPosition * MAX_SIZE + horizontalPostion;
     }
 
+    public Integer[] getFieldPositionFromFieldNumber (Integer fieldNo){
+        Integer[] position = new Integer[2];
+        position[0]=fieldNo/MAX_SIZE;
+        position[1]=Math.floorMod(fieldNo,MAX_SIZE);
+        return position;
+    }
 
     public List<Integer> surroundingFields(Integer fieldNo) {
         Integer verticalPosition;
@@ -72,11 +78,13 @@ public class Map {
         Field field[][] = new Field[MAX_SIZE][MAX_SIZE];
         Map map = new Map(field);
         Random random = new Random();
+        Player player = new Player();
+        player.setName("neutral");
 
         for (int i = 0; i < MAX_SIZE; i++) {
             for (int j = 0; j < MAX_SIZE; j++) {
                 Integer warriorNo = random.nextInt(20)+30;
-                Field newField = new Field(i * MAX_SIZE + j, null, warriorNo);
+                Field newField = new Field(i * MAX_SIZE + j, player, warriorNo);
                 field[i][j] = newField;
 //                System.out.println(newField);
             }
