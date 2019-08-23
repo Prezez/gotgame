@@ -86,6 +86,7 @@ public class Player {
                 ", name='" + name + '\'' +
                 ", gold=" + gold +
                 ", turn=" + turn +
+                ", army=" + army +
                 '}';
     }
 }

@@ -1,5 +1,6 @@
 package com.sda.javagda21.gotgame.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
