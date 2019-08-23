@@ -48,7 +48,13 @@ public class GameGui extends VerticalLayout {
 
 
         fields[0][0].setOwner(player1);
+        fields[0][0].setWarriorNo(player1.getArmy());
+        fields[0][1].setOwner(player1);
+        fields[0][1].setWarriorNo(player1.getArmy());
+        fields[0][2].setOwner(player1);
+        fields[0][2].setWarriorNo(player1.getArmy());
         fields[fields.length - 1][fields[fields.length - 1].length - 1].setOwner(player2);
+        fields[fields.length - 1][fields[fields.length - 1].length - 1].setWarriorNo(player2.getArmy());
 
 
 //        System.out.println(Arrays.toString(fields));
@@ -68,6 +74,7 @@ public class GameGui extends VerticalLayout {
                     button.setText("Atakuj");
                     button.setMinWidth("100px");
                     button.setMinHeight("100px");
+                    button.setId(String.valueOf(fields[i][j].getFieldNo()));
                     hl.add(button);
                 } else {
                     hl.add(label);

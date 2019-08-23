@@ -13,6 +13,11 @@ public class FieldsService {
 
     public boolean checkIfSurroundingFieldsHasAnOwner(Player player, Field field, Map map) {
 
+
+        if (field.getOwner().equals(player)){
+            return false;
+        }
+
         List<Integer> fields = map.surroundingFields(field.getFieldNo());
 
         for (int i = 0; i < fields.size(); i++) {
