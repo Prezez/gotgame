@@ -22,7 +22,7 @@ public class SendMessageGui {
 
     public SendMessageGui() throws IOException {
         FileInputStream serviceAccount =
-                new FileInputStream("C:\\Users\\kzawi\\IdeaProjects\\gotgame\\src\\main\\resources\\static\\friendlychat-b2806-firebase-adminsdk-zttwa-a318ab83ec.json");
+                new FileInputStream("src\\main\\resources\\static\\friendlychat-b2806-firebase-adminsdk-zttwa-a318ab83ec.json");
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                 .setDatabaseUrl("https://friendlychat.firebaseio.com")
