@@ -1,25 +1,40 @@
 package com.sda.javagda21.gotgame.model;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 public class Map {
 
     public static final Integer MAX_SIZE = 4;
     public static final Integer MIN_SIZE = 1;
 
-    private Field[][] field;
+    private Field[][] fields;
 
-    public Map(Field[][] field) {
-        this.field = field;
+    public Map() {
+    }
+
+    public Map(Field[][] fields) {
+        this.fields = fields;
+    }
+
+    public Field[][] getFields() {
+        return fields;
+    }
+
+    public void setFields(Field[][] fields) {
+        this.fields = fields;
     }
 
     public Integer getFieldNumberFromFieldPosition(Integer verticalPosition, Integer horizontalPostion) {
         return verticalPosition * MAX_SIZE + horizontalPostion;
     }
 
+    public Integer[] getFieldPositionFromFieldNumber (Integer fieldNo){
+        Integer[] position = new Integer[2];
+        position[0]=fieldNo/MAX_SIZE;
+        position[1]=Math.floorMod(fieldNo,MAX_SIZE);
+        return position;
+    }
 
     public List<Integer> surroundingFields(Integer fieldNo) {
         Integer verticalPosition;
@@ -53,29 +68,4 @@ public class Map {
         return surroundingFieldsList;
     }
 
-    public static Map createNewMap() {
-        Integer size = MAX_SIZE;
-        Field field[][] = new Field[MAX_SIZE][MAX_SIZE];
-        Map map = new Map(field);
-        Random random = new Random();
-
-        for (int i = 0; i < MAX_SIZE; i++) {
-            for (int j = 0; j < MAX_SIZE; j++) {
-                Integer warriorNo = random.nextInt(20)+30;
-                Field newField = new Field(i * MAX_SIZE + j, null, warriorNo);
-                field[i][j] = newField;
-                System.out.println(newField);
-            }
-        }
-        System.out.println(map);
-
-        return map;
-    }
-
-    @Override
-    public String toString() {
-        return "Map{" +
-                "field=" + Arrays.toString(field) +
-                '}';
-    }
 }

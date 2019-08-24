@@ -10,14 +10,18 @@ import com.vaadin.flow.router.Route;
 public class MainGui extends VerticalLayout {
 
     public MainGui() {
-        TextField textField = new TextField("MAIN MENU");
+        Label label = new Label("MAIN MENU");
+        label.setText("MAIN MENU");
         Button start = new Button("START NEW GAME");
         Button options = new Button("OPTIONS");
         Button ranking = new Button("RANKING");
         Button exit = new Button("EXIT");
 
+        start.addClickListener( e-> {
+            start.getUI().ifPresent(ui -> ui.navigate("waiting-room"));
 
-        add(textField, start, options, ranking, exit);
-    }
+                });
+        add(label, start, options, ranking, exit);
+
 }
-
+}

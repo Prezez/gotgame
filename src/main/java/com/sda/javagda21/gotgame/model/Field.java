@@ -1,5 +1,8 @@
 package com.sda.javagda21.gotgame.model;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
 public class Field {
 
     private Integer fieldNo;

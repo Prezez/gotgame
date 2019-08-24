@@ -1,8 +1,11 @@
 package com.sda.javagda21.gotgame;
 
 import com.sda.javagda21.gotgame.model.Map;
-import com.sda.javagda21.gotgame.Service.ArmyService;
 import com.sda.javagda21.gotgame.entity.Army;
+import com.sda.javagda21.gotgame.service.ArmyService;
+import com.sda.javagda21.gotgame.service.PlayerService;
+
+import java.util.Arrays;
 
 public class main {
     public static void main(String[] args) {
@@ -12,12 +15,12 @@ public class main {
         Army armyTwoja = new Army(200);
 
 
-        ArmyService armyService = new ArmyService();
-        System.out.println(armyService.fight(armyMoja, armyTwoja));
+        PlayerService playerService = new PlayerService();
+        System.out.println(Arrays.toString(playerService.fight(100, 100)));
 
-        Map map = Map.createNewMap();
-        System.out.println("------------------");
-        System.out.println(map.surroundingFields(10));
+//        Map map = Map.createNewMap();
+//        System.out.println("------------------");
+//        System.out.println(map.surroundingFields(10));
 
     }
 }
