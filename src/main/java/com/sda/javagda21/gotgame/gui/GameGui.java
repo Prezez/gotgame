@@ -3,17 +3,21 @@ package com.sda.javagda21.gotgame.gui;
 
 import com.sda.javagda21.gotgame.model.Field;
 import com.sda.javagda21.gotgame.model.Map;
+import com.sda.javagda21.gotgame.model.MapService;
 import com.sda.javagda21.gotgame.model.Player;
 import com.sda.javagda21.gotgame.service.FieldsService;
 import com.sda.javagda21.gotgame.service.PlayerService;
 import com.vaadin.flow.component.Text;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.page.Page;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +25,7 @@ import java.util.List;
 @Route("game")
 public class GameGui extends VerticalLayout {
 
-    Map map = Map.createNewMap();
+    Map map ;
     Grid<Field> grid = new Grid(Field.class);
     Label resultLabel = new Label();
     List<Field> fieldList = new ArrayList<>();
@@ -29,7 +33,10 @@ public class GameGui extends VerticalLayout {
     HorizontalLayout hl = new HorizontalLayout();
 
 
-    public GameGui(FieldsService fieldsService, PlayerService playerService) {
+    @Autowired
+    public GameGui(MapService mapService, FieldsService fieldsService, PlayerService playerService) {
+
+        map = mapService.loadMap();
 
         // TODO: jak zainicjować mapę przed powstaniem GUI
         // TODO: jak dodać graczy i przypisać ich do pól
@@ -40,7 +47,7 @@ public class GameGui extends VerticalLayout {
         player1.setName("Dave");
         player1.setGold(10);
         player1.setTurn(1);
-        player1.setArmy(50);
+        player1.setArmy(80);
         Player player2 = new Player();
         player2.setName("John");
         player2.setGold(10);
@@ -93,6 +100,7 @@ public class GameGui extends VerticalLayout {
 //                                hl.add(button1);
 //                            }
 
+
                         } else {
                             field.getOwner().setArmy(resultTable[1]);
                             field.setWarriorNo(resultTable[1]);
@@ -101,7 +109,10 @@ public class GameGui extends VerticalLayout {
                             fieldList = updateFieldList(fieldList);
                             grid.setItems(fieldList);
 
+
                         }
+                        mapService.save(map);
+                        UI.getCurrent().getPage().reload();
                     });
 
                     hl.add(button);

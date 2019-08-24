@@ -18,9 +18,9 @@ public class main {
         PlayerService playerService = new PlayerService();
         System.out.println(Arrays.toString(playerService.fight(100, 100)));
 
-        Map map = Map.createNewMap();
-        System.out.println("------------------");
-        System.out.println(map.surroundingFields(10));
+//        Map map = Map.createNewMap();
+//        System.out.println("------------------");
+//        System.out.println(map.surroundingFields(10));
 
     }
 }
