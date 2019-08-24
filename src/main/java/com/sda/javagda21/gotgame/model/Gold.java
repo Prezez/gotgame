@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.Entity;
 
-@Entity
+//@Entity
 public class Gold {
 
     private int currentValue;
