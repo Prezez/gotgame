@@ -21,7 +21,7 @@ public class AppUser implements UserDetails {
     private String password;
     private String role;
 
-    public AppUser(Long id, String username, String password, String role) {
+    public AppUser(String username, String password, String role) {
 
         this.username = username;
         this.password = password;
@@ -30,6 +30,8 @@ public class AppUser implements UserDetails {
 
     public AppUser() {
     }
+
+
 
     public Long getId() {
         return id;
@@ -89,4 +91,6 @@ public class AppUser implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+
 }

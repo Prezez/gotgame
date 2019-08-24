@@ -7,19 +7,18 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-//@Service
-//public interface UserDetailsServiceImp implements UserDetailsService {
+@Service
+public class UserDetailsServiceImpl implements UserDetailsService {
 
-   // private AppUserRepo appUserRepo;
-//
-  //  @Autowired
-    //public UserDetailsServiceImpl(AppUserRepo appUserRepo) {
-      //  this.appUserRepo = appUserRepo;
-    //}
+    private AppUserRepo appUserRepo;
 
-   // @Override
-    //public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-//  return appUserRepo.findByUsername(s);
-// }
-//}
+    @Autowired
+    public UserDetailsServiceImpl(AppUserRepo appUserRepo) {
+        this.appUserRepo = appUserRepo;
+    }
 
+    @Override
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        return appUserRepo.findByUsername(s);
+    }
+}
