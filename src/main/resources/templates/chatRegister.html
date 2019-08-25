@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="refresh" content="1">
+    <meta charset="UTF-8">
+    <title>Chat</title>
+</head>
+<body>
+
+<table>
+
+    <tr th:each="message : ${addMessageForm}">
+        <td th:text="${message}"></td>
+
+    </tr>
+
+</table>
+</body>
+</html>

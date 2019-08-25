@@ -2,26 +2,28 @@ package com.sda.javagda21.gotgame.service;
 
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class HistoryMessageService {
-    private Set<String> registreMessage;
+    private List<String> registreMessage;
 
 
     public HistoryMessageService() {
-        registreMessage = new TreeSet<>();
+        registreMessage = new ArrayList<>();
 
 
     }
 
-    public Set<String> getRegistreMessage() {
+    public List<String> getRegistreMessage() {
         return registreMessage;
     }
 
     public void addMessage(String message) {
+//        LocalDateTime now = LocalDateTime.now();
+//        DateTimeFormatter dataNow = DateTimeFormatter.ofPattern("HH:mm:ss");
+//        String formatData = now.format(dataNow);
         registreMessage.add(message);
     }
 }

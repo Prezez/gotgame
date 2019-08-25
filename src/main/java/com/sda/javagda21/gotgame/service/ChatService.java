@@ -9,10 +9,12 @@ import org.springframework.stereotype.Service;
 public class ChatService {
 
 
-//    @Autowired
     private GetMessageGui getMessageGui;
-//    @Autowired
     private SendMessageGui sendMessageGui;
 
-
+    @Autowired
+    public ChatService(GetMessageGui getMessageGui, SendMessageGui sendMessageGui) {
+        this.getMessageGui = getMessageGui;
+        this.sendMessageGui = sendMessageGui;
+    }
 }

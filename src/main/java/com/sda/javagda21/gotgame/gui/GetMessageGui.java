@@ -13,8 +13,12 @@ import org.springframework.stereotype.Component;
 public class GetMessageGui {
 
 
-//    @Autowired
     private HistoryMessageService historyMessageService;
+
+    @Autowired
+    public GetMessageGui(HistoryMessageService historyMessageService) {
+        this.historyMessageService = historyMessageService;
+    }
 
     @EventListener(ApplicationReadyEvent.class)
     public void main() {
