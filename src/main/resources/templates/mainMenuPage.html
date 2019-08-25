@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>MAIN MENU</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="../static/styles.css" th:href="@{/styles.css}" rel="stylesheet" />
+
 </head>
 <body>
 <br/>
 <br/>
 <br/>
-<h2 align="center" >MAIN MENU</h2>
+<h1 align="center">MAIN MENU</h1>
 <form action="/main-menu" method="post">
+    <br/>
     <div class="menu">
-        <input type="submit" value="START GAME">
-        <br/>
-        <input type="submit" value="RANKING">
-        <br/>
-        <input type="submit" value="EXIT">
-        <br/>
+        <div class="button_cont" align="center"><a class="example_f" href="/waiting-room" target="_blank" rel="nofollow"><span>START GAME</span></a></div><br/>
+        <div class="button_cont" align="center"><a class="example_f" href="/ranking" target="_blank" rel="nofollow"><span>RANKING</span></a></div><br/>
+        <div class="button_cont" align="center"><a class="example_f" href="/exit" target="_blank" rel="nofollow"><span>EXIT</span></a></div>
+            <br/>
     </div>
 
 </form>
