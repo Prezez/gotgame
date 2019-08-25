@@ -7,15 +7,12 @@ import com.sda.javagda21.gotgame.model.MapService;
 import com.sda.javagda21.gotgame.model.Player;
 import com.sda.javagda21.gotgame.service.FieldsService;
 import com.sda.javagda21.gotgame.service.PlayerService;
-import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.page.Page;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 

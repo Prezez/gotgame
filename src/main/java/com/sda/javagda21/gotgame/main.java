@@ -1,8 +1,8 @@
 package com.sda.javagda21.gotgame;
 
-import com.sda.javagda21.gotgame.model.Map;
+
+
 import com.sda.javagda21.gotgame.entity.Army;
-import com.sda.javagda21.gotgame.service.ArmyService;
 import com.sda.javagda21.gotgame.service.PlayerService;
 
 import java.util.Arrays;

@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'MedievalSharp';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('MedievalSharp'), url(https://fonts.gstatic.com/s/medievalsharp/v12/EvOJzAlL3oU5AQl2mP5KdgptMqZwMjvX.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'MedievalSharp';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('MedievalSharp'), url(https://fonts.gstatic.com/s/medievalsharp/v12/EvOJzAlL3oU5AQl2mP5KdgptMqhwMg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+    background-image: url("/image/mount-and-blade.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-family: MedievalSharp;
+    font-size: 70px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-decoration-color: white;
+}
+
+h3 {
+    font-family: MedievalSharp;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+    text-decoration-color: white;
+}
+
+p {
+    font-family: MedievalSharp;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-decoration-color: white;
+}
+
+blockquote {
+    font-family: MedievalSharp;
+    font-size: 31px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-decoration-color: white;
+}
+
+pre {
+    font-family: MedievalSharp;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5714px;
+}
+
+input {
+    font-family: MedievalSharp;
+    text-align: center;
+    border: white;
+    text-decoration-color: white;
+    border: 2px solid white;
+    border-color: white;
+}
+.menu {
+    font-family: MedievalSharp;
+    text-align: center;
+    font-size: 55px;
+    text-decoration-color: white;
+
+}
+
+example_f {
+    border-radius: 4px;
+    background: linear-gradient(to right, white, white) !important;
+    border: none;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 75px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration-color: white;
+}
+.example_f span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+    text-decoration-color: white;
+}
+.example_f span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    text-decoration-color: white;
+}
+.example_f:hover span {
+    padding-right: 25px;
+    text-decoration-color: white;
+}
+.example_f:hover span:after {
+    opacity: 1;
+    right: 0;
+    text-decoration-color: white;
+}
+.exit {
+    font-family: MedievalSharp;
+    text-align: center;
+    font-size: 55px;
+    text-decoration-color: white;
+
+
+
+    background-image: url("/image/113769.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+
+}
+.button_cont {
+    text-decoration-color: white;
+    border: white;
+}
+
+
+
+
