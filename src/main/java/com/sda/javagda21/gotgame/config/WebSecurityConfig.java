@@ -1,4 +1,4 @@
-package com.sda.javagda21.gotgame.Config;
+package com.sda.javagda21.gotgame.config;
 
 import com.sda.javagda21.gotgame.repository.AppUserRepo;
 import com.sda.javagda21.gotgame.service.UserDetailsServiceImpl;
@@ -20,7 +20,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
+import com.sda.javagda21.gotgame.config.*;
 
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {

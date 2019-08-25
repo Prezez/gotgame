@@ -1,4 +1,4 @@
-package com.sda.javagda21.gotgame.Config;
+package com.sda.javagda21.gotgame.config;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

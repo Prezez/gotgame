@@ -1,4 +1,4 @@
-package com.sda.javagda21.gotgame.Config;
+package com.sda.javagda21.gotgame.config;
 
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.FirebaseApp;
