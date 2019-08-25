@@ -1,4 +1,4 @@
-package com.sda.javagda21.gotgame.Config;
+package com.sda.javagda21.gotgame.config;
 
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
