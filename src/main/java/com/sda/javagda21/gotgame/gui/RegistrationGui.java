@@ -26,6 +26,8 @@ public class RegistrationGui extends VerticalLayout {
     Button buttonHello = new Button("Registration", new Icon(VaadinIcon.ACCESSIBILITY));
     Label ok = new Label();
 
+
+
     @Autowired
     public RegistrationGui(PasswordEncoder passwordEncoder, AppUserRepo appUserRepo) {
         this.passwordEncoder = passwordEncoder;
@@ -35,8 +37,9 @@ public class RegistrationGui extends VerticalLayout {
 
         appUserRepo.save(appUser);
 
-        });
 
+        });
+        add(username,password,buttonHello);
 
     }
 }
