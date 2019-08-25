@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Ranking</title>
+</head>
+<body>
+<h2>Ranking</h2>
+
+<a href="/ranking">Players</a>
+
+<table>
+    <tr>
+        <th>Id</th> <!--porządkowa-->
+        <th>Name:</th>
+        <th>Gold:</th>
+        <th>Turn:</th>
+        <th>Army:</th>
+        <th></th>
+    </tr>
+    <tr th:each="player,i : ${ranking}">
+        <td th:text="${player.getId()}"></td>
+        <td th:text="${player.getName}"></td>
+        <td th:text="${player.getGold()}"></td>
+        <td th:text="${player.getTurn()}"></td>
+        <td th:text="${player.getArmy()}"></td>
+        <td>
+        <td>
+            <a th:href="@{'/player/remove?playerId='+${player.getId()}}">Remove</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

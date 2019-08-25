@@ -51,6 +51,7 @@ p {
     font-variant: normal;
     font-weight: 400;
     line-height: 20px;
+    text-decoration-color: white;
 }
 
 blockquote {
@@ -60,6 +61,7 @@ blockquote {
     font-variant: normal;
     font-weight: 400;
     line-height: 30px;
+    text-decoration-color: white;
 }
 
 pre {
@@ -74,11 +76,16 @@ pre {
 input {
     font-family: MedievalSharp;
     text-align: center;
+    border: white;
+    text-decoration-color: white;
+    border: 2px solid white;
+    border-color: white;
 }
 .menu {
     font-family: MedievalSharp;
     text-align: center;
     font-size: 55px;
+    text-decoration-color: white;
 
 }
 
@@ -95,6 +102,7 @@ example_f {
     transition: all 0.4s;
     cursor: pointer;
     margin: 5px;
+    text-decoration-color: white;
 }
 .example_f span {
     cursor: pointer;
@@ -128,6 +136,7 @@ example_f {
     text-decoration-color: white;
 
 
+
     background-image: url("/image/113769.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -135,6 +144,10 @@ example_f {
     background-position: center;
 
 
+}
+.button_cont {
+    text-decoration-color: white;
+    border: white;
 }
 
 

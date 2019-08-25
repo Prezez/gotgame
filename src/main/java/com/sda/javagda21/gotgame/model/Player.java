@@ -21,6 +21,16 @@ public class Player {
     private int turn;
     private int army;
 
+    public Player() {
+    }
+
+    public Player(String name, int gold, int turn, int army) {
+        this.name = name;
+        this.gold = gold;
+        this.turn = turn;
+        this.army = army;
+    }
+
     public int getArmy() {
         return army;
     }
