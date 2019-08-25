@@ -31,6 +31,7 @@ h1 {
     font-variant: normal;
     font-weight: 700;
     line-height: 26.4px;
+    text-decoration-color: white;
 }
 
 h3 {
@@ -40,6 +41,7 @@ h3 {
     font-variant: normal;
     font-weight: 700;
     line-height: 15.4px;
+    text-decoration-color: white;
 }
 
 p {
@@ -82,9 +84,9 @@ input {
 
 example_f {
     border-radius: 4px;
-    background: linear-gradient(to right, #FFFFFF, #FFFFFF) !important;
+    background: linear-gradient(to right, white, white) !important;
     border: none;
-    color: #FFFFFF;
+    color: white;
     text-align: center;
     text-transform: uppercase;
     font-size: 75px;
@@ -99,6 +101,7 @@ example_f {
     display: inline-block;
     position: relative;
     transition: 0.4s;
+    text-decoration-color: white;
 }
 .example_f span:after {
     content: '\00bb';
@@ -107,14 +110,33 @@ example_f {
     top: 0;
     right: -20px;
     transition: 0.5s;
+    text-decoration-color: white;
 }
 .example_f:hover span {
     padding-right: 25px;
+    text-decoration-color: white;
 }
 .example_f:hover span:after {
     opacity: 1;
     right: 0;
+    text-decoration-color: white;
 }
+.exit {
+    font-family: MedievalSharp;
+    text-align: center;
+    font-size: 55px;
+    text-decoration-color: white;
+
+
+    background-image: url("/image/113769.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
 
 
 

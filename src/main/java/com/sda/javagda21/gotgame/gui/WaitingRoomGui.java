@@ -20,10 +20,6 @@ public class WaitingRoomGui extends VerticalLayout {
         TextField textPlayer1 = new TextField();
         Label namePlayer2 = new Label("Waiting for 2 Players");
 
-//        UI.getCurrent().getPage().addStyleSheet("/styles2.css");
-
-
-
         Button button = new Button("Start Game");
 
         add(namePlayer1, textPlayer1, namePlayer2, button);
