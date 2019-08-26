@@ -1,19 +1,21 @@
 package com.sda.javagda21.gotgame.model;
 
 
+import com.sda.javagda21.gotgame.config.AppUser;
+
 public class Message {
 
     private String value;
 
-    public String getPlayer() {
-        return player;
+    private AppUser user;
+
+    public AppUser getUser() {
+        return user;
     }
 
-    public void setPlayer(String player) {
-        this.player = player;
+    public void setUser(AppUser user) {
+        this.user = user;
     }
-
-    private String player;
 
     public Message(String message) {
         this.value = message;
