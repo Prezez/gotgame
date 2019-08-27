@@ -13,8 +13,8 @@ public class MainMenuController {
 
     }
 
-    @GetMapping("/redirectToWaitingRoom")
-    public String redirectToWaitingRoom() {
-        return "waitingRoomPage";
-    }
+//    @GetMapping("/redirectToRegistration")
+//    public String redirectToRegistration() {
+//        return "registrationPage";
+//    }
 }
