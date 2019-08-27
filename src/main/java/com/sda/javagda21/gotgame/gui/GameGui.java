@@ -89,8 +89,8 @@ public class GameGui extends VerticalLayout {
                             resultLabel.setText("Winner is: " + activePlayer.getName());
                             fieldList = updateFieldList(fieldList);
                             grid.setItems(fieldList);
-                            hl.remove(button);
-                            hl.add(label);
+//                            hl.remove(button);
+//                            hl.add(label);
 //                            if (fieldsService.checkIfSurroundingFieldsHasAnOwner(activePlayer, field, map)) {
 //                                Button button1 = new Button();
 //                                button1.setText("coś");
@@ -105,7 +105,6 @@ public class GameGui extends VerticalLayout {
                             resultLabel.setText("Winner is: " + field.getOwner().getName());
                             fieldList = updateFieldList(fieldList);
                             grid.setItems(fieldList);
-
 
                         }
                         mapService.save(map);

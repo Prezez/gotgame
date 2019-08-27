@@ -14,7 +14,7 @@ public class FieldsService {
     public boolean checkIfSurroundingFieldsHasAnOwner(Player player, Field field, Map map) {
 
 
-        if (field.getOwner().equals(player)){
+        if (field.getOwner().getName().equals(player.getName())){
             return false;
         }
 
