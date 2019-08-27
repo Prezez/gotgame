@@ -62,4 +62,20 @@ public class MapService {
         System.out.println(player.getName() + " ma " + result);
         return result;
     }
+
+    public Integer numberOfFields() {
+        Integer counter = 0;
+
+        Field[][] fields = currentMap.getFields();
+
+        for (int i = 0; i < fields.length; i++) {
+            for (int j = 0; j < fields[i].length; j++) {
+                Field currentField = fields[i][j];
+                counter++;
+            }
+        }
+        return counter;
+    }
+
 }
+

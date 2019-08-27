@@ -102,11 +102,7 @@ public class PlayerService {
         }
     }
 
-    public Player[] loadStartingSetup(Field[][] fields) {
-
-
-        players = new Player[2];
-        players = createPlayers();
+    public void loadStartingSetup(Field[][] fields) {
 
 
         fields[0][0].setOwner(players[0]);
@@ -114,24 +110,14 @@ public class PlayerService {
         fields[fields.length - 1][fields[fields.length - 1].length - 1].setOwner(players[1]);
         fields[fields.length - 1][fields[fields.length - 1].length - 1].setWarriorNo(players[1].getArmy());
 
-        return players;
     }
 
 
-    private Player[] createPlayers() {
+    public Player[] createPlayers(String playerOneName, String playerTwoName) {
         players = new Player[2];
 
-        Player player1 = new Player();
-        player1.setName("Dave");
-        player1.setGold(STARTING_GOLD);
-        player1.setTurn(1);
-        player1.setArmy(STARTING_ARMY);
-
-        Player player2 = new Player();
-        player2.setName("John");
-        player2.setGold(STARTING_GOLD);
-        player2.setTurn(1);
-        player2.setArmy(STARTING_ARMY);
+        Player player1 = setupStartingPlayerParameters(playerOneName);
+        Player player2 = setupStartingPlayerParameters(playerTwoName);
 
         players[0] = player1;
         players[1] = player2;
@@ -140,9 +126,24 @@ public class PlayerService {
 
     }
 
-    public Player[] loadPlayers(Field[][] fields) {
-        if (players == null) {
-            players = loadStartingSetup(fields);
+    private Player setupStartingPlayerParameters(String playerName) {
+        Player player = new Player();
+        player.setName(playerName);
+        player.setGold(STARTING_GOLD);
+        player.setTurn(1);
+        player.setArmy(STARTING_ARMY);
+
+        return player;
+    }
+
+    public Player[] loadPlayers(Field[][] fields, String playerOneName, String playerTwoName) {
+        if (players==null)
+        {
+            players = createPlayers(playerOneName, playerTwoName);
+        }
+
+        if (fields[0][0].getOwner().getName().equals("neutral")) {
+            loadStartingSetup(fields);
         }
 
         return players;

@@ -1,6 +1,7 @@
 package com.sda.javagda21.gotgame.service;
 
 import com.sda.javagda21.gotgame.model.Field;
+import com.sda.javagda21.gotgame.model.Player;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,4 +20,16 @@ public class GameService {
         return fieldListToUpdate;
     }
 
+
+    public boolean checkIfWin(MapService mapService, Player activePlayer) {
+
+        Integer fieldsOwned = mapService.numberOfFieldsOwned(activePlayer);
+        Integer numberOfFields = mapService.numberOfFields();
+        boolean win = false;
+        if (fieldsOwned==numberOfFields) {
+            win = true;
+        }
+
+        return win;
+    }
 }

@@ -15,6 +15,7 @@ import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.VaadinSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -23,13 +24,11 @@ import java.util.List;
 @Route("game")
 public class GameGui extends VerticalLayout {
 
-    Map map ;
+    Map map;
     Grid<Field> grid = new Grid(Field.class);
     Label resultLabel = new Label();
     List<Field> fieldList = new ArrayList<>();
     Player activePlayer;
-//    HorizontalLayout hl = new HorizontalLayout();
-
 
 
     @Autowired
@@ -37,17 +36,15 @@ public class GameGui extends VerticalLayout {
 
         map = mapService.loadMap();
 
-        // TODO: jak zainicjować mapę przed powstaniem GUI
-        // TODO: jak dodać graczy i przypisać ich do pól
-
-//        Map map = Map.createNewMap();
         Field[][] fields = map.getFields();
 
-        Player[] players = playerService.loadPlayers(fields);
+        String playerOneName = String.valueOf(VaadinSession.getCurrent().getSession().getAttribute("playerOne"));
+        String playerTwoName = String.valueOf(VaadinSession.getCurrent().getSession().getAttribute("playerTwo"));
+
+        Player[] players = playerService.loadPlayers(fields, playerOneName, playerTwoName);
 
         activePlayer = playerService.getActivePlayer(players[0], players[1]);
 
-//        System.out.println(Arrays.toString(fields));
         for (int i = 0; i < fields.length; i++) {
             HorizontalLayout hl = new HorizontalLayout();
             for (int j = 0; j < fields[i].length; j++) {
@@ -66,7 +63,6 @@ public class GameGui extends VerticalLayout {
                     button.setMinWidth("100px");
                     button.setMinHeight("100px");
                     button.setId(String.valueOf(fields[i][j].getFieldNo()));
-//                    int fieldArmySize = fields[i][j].getWarriorNo();
                     button.addClickListener(buttonClickEvent -> {
                         int[] resultTable = playerService.fight(activePlayer.getArmy(), field.getWarriorNo());
                         if (resultTable[0] > resultTable[1]) {
@@ -109,10 +105,11 @@ public class GameGui extends VerticalLayout {
         endTurnButton.setMinWidth("200px");
         endTurnButton.addClickListener(click -> {
             int activePlayerTurnNo = activePlayer.getTurn();
-            activePlayer.setTurn(activePlayerTurnNo+1);
+            activePlayer.setTurn(activePlayerTurnNo + 1);
             Integer numberOfFieldsOwned = mapService.numberOfFieldsOwned(activePlayer);
             playerService.updateGoldAmount(activePlayer, numberOfFieldsOwned);
             mapService.save(map);
+
             UI.getCurrent().getPage().reload();
         });
 
@@ -128,10 +125,14 @@ public class GameGui extends VerticalLayout {
         grid.setItems(fieldList);
         add(grid);
 
+        boolean win = gameService.checkIfWin(mapService, activePlayer);
 
+        if (win) {
+            UI.getCurrent().navigate("win");
+            UI.getCurrent().getPage().reload();
+        }
 
     }
-
 
 
 //    public Button buttonFuncionality (Field field, PlayerService playerService) {
