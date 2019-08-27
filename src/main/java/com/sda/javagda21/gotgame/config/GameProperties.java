@@ -2,7 +2,7 @@ package com.sda.javagda21.gotgame.config;
 
 public class GameProperties {
 
-    public static final Integer MAX_SIZE = 2;
+    public static final Integer MAX_SIZE = 4;
     public static final Integer MIN_SIZE = 1;
 
     public static final Integer GOLD_INCREASE = 10;

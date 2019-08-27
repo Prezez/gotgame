@@ -63,7 +63,7 @@ public class PlayerService {
         System.out.println("Starting defending Army: " + startingDefendingArmySize);
 
         do {
-            damage = (dealDmg(attackingArmy)) * 3/4;
+            damage = (dealDmg(attackingArmy)) * 3 / 4;
             remainingSize = takeDmg(damage, defendingArmy);
             if (remainingSize < 0) {
                 remainingSize = 0;
@@ -137,10 +137,14 @@ public class PlayerService {
     }
 
     public Player[] loadPlayers(Field[][] fields, String playerOneName, String playerTwoName) {
-        if (players==null)
-        {
-            players = createPlayers(playerOneName, playerTwoName);
+        if (players == null) {
+            if (!playerOneName.equals("null") && !playerTwoName.equals("null")) {
+                players = createPlayers(playerOneName, playerTwoName);
+            } else {
+                players = createPlayers("Green", "Red");
+            }
         }
+
 
         if (fields[0][0].getOwner().getName().equals("neutral")) {
             loadStartingSetup(fields);
@@ -150,9 +154,34 @@ public class PlayerService {
     }
 
 
-    public void updateGoldAmount(Player player, Integer numberOfFieldsOwned){
+    public void increaseGoldAmount(Player player, Integer numberOfFieldsOwned) {
         int goldOwned = player.getGold();
-        player.setGold(goldOwned + numberOfFieldsOwned*GOLD_INCREASE);
+        player.setGold(goldOwned + numberOfFieldsOwned * GOLD_INCREASE);
+    }
+
+    public boolean buyWarriors(int warriorAmount, Player player) {
+        int amountToBePaid = warriorAmount * WARRIOR_COST;
+        boolean enoughGold = spendGold(player, amountToBePaid);
+        if (enoughGold && warriorAmount>0) {
+            updateWarriorAmount(warriorAmount, player);
+            return true;
+        }
+        return false;
+    }
+
+    private void updateWarriorAmount(int warriorAmount, Player player) {
+        int currentArmy = player.getArmy();
+        player.setArmy(currentArmy + warriorAmount);
+    }
+
+    private boolean spendGold(Player player, Integer amount) {
+        int currentGold = player.getGold();
+        if (currentGold < amount) {
+            return false;
+        } else {
+            player.setGold(currentGold - amount);
+            return true;
+        }
     }
 
 

@@ -8,12 +8,15 @@ import com.sda.javagda21.gotgame.service.MapService;
 import com.sda.javagda21.gotgame.model.Player;
 import com.sda.javagda21.gotgame.service.FieldsService;
 import com.sda.javagda21.gotgame.service.PlayerService;
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -107,18 +110,33 @@ public class GameGui extends VerticalLayout {
             int activePlayerTurnNo = activePlayer.getTurn();
             activePlayer.setTurn(activePlayerTurnNo + 1);
             Integer numberOfFieldsOwned = mapService.numberOfFieldsOwned(activePlayer);
-            playerService.updateGoldAmount(activePlayer, numberOfFieldsOwned);
+            playerService.increaseGoldAmount(activePlayer, numberOfFieldsOwned);
             mapService.save(map);
 
             UI.getCurrent().getPage().reload();
         });
 
         Button buyWarriorsButton = new Button();
+        TextField warriorsAmount = new TextField();
+        warriorsAmount.setMinWidth("200px");
+        warriorsAmount.setMinHeight("100px");
+        warriorsAmount.setTitle("Enter Amount");
+        warriorsAmount.setLabel("Warrior Amount");
         buyWarriorsButton.setText("Buy Warriors");
         buyWarriorsButton.setMinHeight("100px");
         buyWarriorsButton.setMinWidth("200px");
+        buyWarriorsButton.addClickListener(click -> {
+            boolean buyWarriorsPositive = playerService.buyWarriors(Integer.valueOf(warriorsAmount.getValue()), activePlayer);
+            if (buyWarriorsPositive) {
+                fieldList = gameService.updateFieldList(fieldList);
+                UI.getCurrent().getPage().reload();
+            } else {
+                Notification.show("Wrong amount", 10000, Notification.Position.MIDDLE);
+            }
+        });
 
         buttonOptionsLayout.add(endTurnButton);
+        buttonOptionsLayout.add(warriorsAmount);
         buttonOptionsLayout.add(buyWarriorsButton);
         add(buttonOptionsLayout);
 
