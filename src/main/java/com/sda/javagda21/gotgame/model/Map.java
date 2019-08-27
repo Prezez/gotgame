@@ -1,12 +1,16 @@
 package com.sda.javagda21.gotgame.model;
 
+import com.sda.javagda21.gotgame.config.GameProperties;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.sda.javagda21.gotgame.config.GameProperties.MAX_SIZE;
+import static com.sda.javagda21.gotgame.config.GameProperties.MIN_SIZE;
+
 public class Map {
 
-    public static final Integer MAX_SIZE = 4;
-    public static final Integer MIN_SIZE = 1;
+
 
     private Field[][] fields;
 

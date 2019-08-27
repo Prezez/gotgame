@@ -3,7 +3,8 @@ package com.sda.javagda21.gotgame.gui;
 
 import com.sda.javagda21.gotgame.model.Field;
 import com.sda.javagda21.gotgame.model.Map;
-import com.sda.javagda21.gotgame.model.MapService;
+import com.sda.javagda21.gotgame.service.GameService;
+import com.sda.javagda21.gotgame.service.MapService;
 import com.sda.javagda21.gotgame.model.Player;
 import com.sda.javagda21.gotgame.service.FieldsService;
 import com.sda.javagda21.gotgame.service.PlayerService;
@@ -27,11 +28,12 @@ public class GameGui extends VerticalLayout {
     Label resultLabel = new Label();
     List<Field> fieldList = new ArrayList<>();
     Player activePlayer;
-    HorizontalLayout hl = new HorizontalLayout();
+//    HorizontalLayout hl = new HorizontalLayout();
+
 
 
     @Autowired
-    public GameGui(MapService mapService, FieldsService fieldsService, PlayerService playerService) {
+    public GameGui(MapService mapService, FieldsService fieldsService, PlayerService playerService, GameService gameService) {
 
         map = mapService.loadMap();
 
@@ -40,24 +42,10 @@ public class GameGui extends VerticalLayout {
 
 //        Map map = Map.createNewMap();
         Field[][] fields = map.getFields();
-        Player player1 = new Player();
-        player1.setName("Dave");
-        player1.setGold(10);
-        player1.setTurn(1);
-        player1.setArmy(80);
-        Player player2 = new Player();
-        player2.setName("John");
-        player2.setGold(10);
-        player2.setTurn(1);
-        player2.setArmy(50);
 
-        fields[0][0].setOwner(player1);
-        fields[0][0].setWarriorNo(player1.getArmy());
-        fields[fields.length - 1][fields[fields.length - 1].length - 1].setOwner(player2);
-        fields[fields.length - 1][fields[fields.length - 1].length - 1].setWarriorNo(player2.getArmy());
+        Player[] players = playerService.loadPlayers(fields);
 
-
-        activePlayer = playerService.getActivePlayer(player1, player2);
+        activePlayer = playerService.getActivePlayer(players[0], players[1]);
 
 //        System.out.println(Arrays.toString(fields));
         for (int i = 0; i < fields.length; i++) {
@@ -87,23 +75,15 @@ public class GameGui extends VerticalLayout {
                             field.setWarriorNo(resultTable[0]);
                             activePlayer.setArmy(resultTable[0]);
                             resultLabel.setText("Winner is: " + activePlayer.getName());
-                            fieldList = updateFieldList(fieldList);
+                            fieldList = gameService.updateFieldList(fieldList);
                             grid.setItems(fieldList);
-//                            hl.remove(button);
-//                            hl.add(label);
-//                            if (fieldsService.checkIfSurroundingFieldsHasAnOwner(activePlayer, field, map)) {
-//                                Button button1 = new Button();
-//                                button1.setText("coś");
-//                                hl.add(button1);
-//                            }
-
 
                         } else {
                             field.getOwner().setArmy(resultTable[1]);
                             field.setWarriorNo(resultTable[1]);
                             activePlayer.setArmy(resultTable[0]);
                             resultLabel.setText("Winner is: " + field.getOwner().getName());
-                            fieldList = updateFieldList(fieldList);
+                            fieldList = gameService.updateFieldList(fieldList);
                             grid.setItems(fieldList);
 
                         }
@@ -121,34 +101,38 @@ public class GameGui extends VerticalLayout {
 
 
         add(resultLabel);
+
+        HorizontalLayout buttonOptionsLayout = new HorizontalLayout();
+        Button endTurnButton = new Button();
+        endTurnButton.setText("End Turn");
+        endTurnButton.setMinHeight("100px");
+        endTurnButton.setMinWidth("200px");
+        endTurnButton.addClickListener(click -> {
+            int activePlayerTurnNo = activePlayer.getTurn();
+            activePlayer.setTurn(activePlayerTurnNo+1);
+            Integer numberOfFieldsOwned = mapService.numberOfFieldsOwned(activePlayer);
+            playerService.updateGoldAmount(activePlayer, numberOfFieldsOwned);
+            mapService.save(map);
+            UI.getCurrent().getPage().reload();
+        });
+
+        Button buyWarriorsButton = new Button();
+        buyWarriorsButton.setText("Buy Warriors");
+        buyWarriorsButton.setMinHeight("100px");
+        buyWarriorsButton.setMinWidth("200px");
+
+        buttonOptionsLayout.add(endTurnButton);
+        buttonOptionsLayout.add(buyWarriorsButton);
+        add(buttonOptionsLayout);
+
         grid.setItems(fieldList);
         add(grid);
 
-//        grid.setItems(fields[i]);
-//        System.out.println(Arrays.toString(fields[i]));
-//        System.out.println(fields[i][i].getFieldNo());
-//        Label label = new Label();
-//        label.setText(String.valueOf(fields[i][i].getFieldNo()) + fields[i][i].getOwner());
-//        add(label);
 
-//        for (Field[] field : fields) {
-//            grid.setItems(field);
-//            System.out.println(field);
-//
-//        }
 
     }
 
-    public List<Field> updateFieldList(List<Field> fieldListToUpdate) {
-        for (Field field : fieldListToUpdate) {
-            if (!field.getOwner().getName().equals("neutral")) {
-                field.setWarriorNo(field.getOwner().getArmy());
-            } else {
-                field.setWarriorNo(field.getWarriorNo());
-            }
-        }
-        return fieldListToUpdate;
-    }
+
 
 //    public Button buttonFuncionality (Field field, PlayerService playerService) {
 //
