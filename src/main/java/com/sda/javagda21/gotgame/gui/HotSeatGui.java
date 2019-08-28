@@ -1,8 +1,7 @@
 package com.sda.javagda21.gotgame.gui;
 
-import com.sda.javagda21.gotgame.service.PlayerService;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
@@ -26,16 +25,23 @@ public class HotSeatGui extends VerticalLayout {
         playerOneName = playerOne.getValue();
         playerTwoName = playerTwo.getValue();
         startGameButton.addClickListener(click -> {
-            VaadinSession.getCurrent().getSession().setAttribute("playerOne", playerOne.getValue());
-            VaadinSession.getCurrent().getSession().setAttribute("playerTwo", playerTwo.getValue());
-            getUI().ifPresent(ui -> ui.navigate("game"));
+
+            if (playerOne.getValue().equals("") || playerTwo.getValue().equals("")) {
+                Notification.show("Name cannot be empty!", 10000, Notification.Position.MIDDLE);
+            } else {
+                if (!playerOne.getValue().equals(playerTwo.getValue())) {
+                    VaadinSession.getCurrent().getSession().setAttribute("playerOne", playerOne.getValue());
+                    VaadinSession.getCurrent().getSession().setAttribute("playerTwo", playerTwo.getValue());
+                    getUI().ifPresent(ui -> ui.navigate("game"));
+                } else {
+                    Notification.show("Names cannot be the same!", 10000, Notification.Position.MIDDLE);
+                }
+            }
         });
 
         add(playerOne);
         add(playerTwo);
         add(startGameButton);
-
-
 
 
     }

@@ -185,4 +185,12 @@ public class PlayerService {
     }
 
 
+    public Player[] resetPlayers(String playerOneName, String playerTwoName) {
+        if (!playerOneName.equals("null") && !playerTwoName.equals("null")) {
+            players = createPlayers(playerOneName, playerTwoName);
+        } else {
+            players = createPlayers("Green", "Red");
+        }
+        return players;
+    }
 }

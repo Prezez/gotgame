@@ -3,12 +3,11 @@ package com.sda.javagda21.gotgame.gui;
 
 import com.sda.javagda21.gotgame.model.Field;
 import com.sda.javagda21.gotgame.model.Map;
-import com.sda.javagda21.gotgame.service.GameService;
-import com.sda.javagda21.gotgame.service.MapService;
 import com.sda.javagda21.gotgame.model.Player;
 import com.sda.javagda21.gotgame.service.FieldsService;
+import com.sda.javagda21.gotgame.service.GameService;
+import com.sda.javagda21.gotgame.service.MapService;
 import com.sda.javagda21.gotgame.service.PlayerService;
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -32,7 +31,9 @@ public class GameGui extends VerticalLayout {
     Label resultLabel = new Label();
     List<Field> fieldList = new ArrayList<>();
     Player activePlayer;
-
+    Player[] players;
+    String playerOneName;
+    String playerTwoName;
 
     @Autowired
     public GameGui(MapService mapService, FieldsService fieldsService, PlayerService playerService, GameService gameService) {
@@ -41,10 +42,10 @@ public class GameGui extends VerticalLayout {
 
         Field[][] fields = map.getFields();
 
-        String playerOneName = String.valueOf(VaadinSession.getCurrent().getSession().getAttribute("playerOne"));
-        String playerTwoName = String.valueOf(VaadinSession.getCurrent().getSession().getAttribute("playerTwo"));
+        playerOneName = String.valueOf(VaadinSession.getCurrent().getSession().getAttribute("playerOne"));
+        playerTwoName = String.valueOf(VaadinSession.getCurrent().getSession().getAttribute("playerTwo"));
 
-        Player[] players = playerService.loadPlayers(fields, playerOneName, playerTwoName);
+        players = playerService.loadPlayers(fields, playerOneName, playerTwoName);
 
         activePlayer = playerService.getActivePlayer(players[0], players[1]);
 
@@ -140,6 +141,16 @@ public class GameGui extends VerticalLayout {
         buttonOptionsLayout.add(buyWarriorsButton);
         add(buttonOptionsLayout);
 
+        Button createNewGameButton = new Button();
+        createNewGameButton.addClickListener(click ->{
+            map = mapService.resetMap();
+            players = playerService.resetPlayers(playerOneName, playerTwoName);
+        });
+        createNewGameButton.setText("Start New Game");
+        createNewGameButton.setMinWidth("630px");
+        createNewGameButton.setMinHeight("100px");
+        add(createNewGameButton);
+
         grid.setItems(fieldList);
         add(grid);
 
@@ -151,83 +162,6 @@ public class GameGui extends VerticalLayout {
         }
 
     }
-
-
-//    public Button buttonFuncionality (Field field, PlayerService playerService) {
-//
-//        Button button = new Button();
-//        button.addClickListener(buttonClickEvent -> {
-//            int[] resultTable = playerService.fight(activePlayer.getArmy(), field.getWarriorNo());
-//            if (resultTable[0]>resultTable[1]){
-//                field.getOwner().setArmy(resultTable[1]);
-//                field.setOwner(activePlayer);
-//                field.setWarriorNo(resultTable[0]);
-//                activePlayer.setArmy(resultTable[0]);
-//                resultLabel.setText("Winner is: " + activePlayer.getName());
-//                fieldList = updateFieldList(fieldList);
-//                grid.setItems(fieldList);
-//                hl.remove(button);
-//                hl.add(label);
-//
-//            } else {
-//                field.getOwner().setArmy(resultTable[1]);
-//                field.setWarriorNo(resultTable[1]);
-//                activePlayer.setArmy(resultTable[0]);
-//                resultLabel.setText("Winner is: " + field.getOwner().getName());
-//                fieldList = updateFieldList(fieldList);
-//            }
-//        });
-//
-//        return button;
-//    }
-
-//    public static void refreshMap (Map map, FieldsService fieldsService, PlayerService playerService, Player activePlayer){
-//        Field[][] fields = map.getFields();
-//
-//        for (int i = 0; i < fields.length; i++) {
-//            HorizontalLayout hl = new HorizontalLayout();
-//            for (int j = 0; j < fields[i].length; j++) {
-//                fieldList.add(fields[i][j]);
-//                Label label = new Label();
-//                label.setText(String.valueOf(fields[i][j].getFieldNo()));
-//                label.setMinWidth("100px");
-//                label.setMinHeight("100px");
-//                label.setId(String.valueOf(fields[i][j].getFieldNo()));
-//                label.setClassName(fields[i][j].getOwner().getName());
-//
-//                if (fieldsService.checkIfSurroundingFieldsHasAnOwner(activePlayer, fields[i][j], map)) {
-//                    Button button = new Button();
-//                    button.setText("Atakuj");
-//                    button.setMinWidth("100px");
-//                    button.setMinHeight("100px");
-//                    button.setId(String.valueOf(fields[i][j].getFieldNo()));
-//                    Field field = fields[i][j];
-////                    int fieldArmySize = fields[i][j].getWarriorNo();
-//                    button.addClickListener(buttonClickEvent -> {
-//                        int[] resultTable = playerService.fight(activePlayer.getArmy(), field.getWarriorNo());
-//                        if (resultTable[0]>resultTable[1]){
-//                            field.getOwner().setArmy(resultTable[1]);
-//                            field.setOwner(activePlayer);
-//                            field.setWarriorNo(resultTable[0]);
-//                            activePlayer.setArmy(resultTable[0]);
-//                            resultLabel.setText("Winner is: " + activePlayer.getName());
-//                            grid.setItems(fieldList);
-//                        } else {
-//                            field.getOwner().setArmy(resultTable[1]);
-//                            field.setWarriorNo(resultTable[1]);
-//                            activePlayer.setArmy(resultTable[0]);
-//                            resultLabel.setText("Winner is: " + field.getOwner().getName());
-//                        }
-//                    });
-//                    hl.add(button);
-//                } else {
-//                    hl.add(label);
-//                }
-//            }
-//            add(hl);
-//        }
-//    }
-
 
 }
 
