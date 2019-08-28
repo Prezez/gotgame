@@ -14,4 +14,7 @@ public class GameProperties {
 
     public static final Integer WARRIOR_HEALTH = 3;
 
+    public static final Integer FIX_NEUTRAL_ARMY_AMOUNT = 30;
+    public static final Integer RANDOM_NEUTRAL_ARMY_AMOUNT = 20;
+
 }

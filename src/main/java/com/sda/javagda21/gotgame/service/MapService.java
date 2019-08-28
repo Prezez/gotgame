@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
-import static com.sda.javagda21.gotgame.config.GameProperties.MAX_SIZE;
+import static com.sda.javagda21.gotgame.config.GameProperties.*;
 
 @Component
 public class MapService {
@@ -24,7 +24,7 @@ public class MapService {
 
         for (int i = 0; i < MAX_SIZE; i++) {
             for (int j = 0; j < MAX_SIZE; j++) {
-                Integer warriorNo = random.nextInt(20) + 30;
+                Integer warriorNo = random.nextInt(RANDOM_NEUTRAL_ARMY_AMOUNT) + FIX_NEUTRAL_ARMY_AMOUNT;
                 Field newField = new Field(i * MAX_SIZE + j, player, warriorNo);
                 field[i][j] = newField;
             }
@@ -77,5 +77,9 @@ public class MapService {
         return counter;
     }
 
+    public Map resetMap() {
+        currentMap = createNewMap();
+        return currentMap;
+    }
 }
 
