@@ -91,12 +91,10 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", gold=" + gold +
-                ", turn=" + turn +
-                ", army=" + army +
-                '}';
+        return
+
+                "Player: " + name +
+                        " has: gold= " + gold +
+                        ", army=" + army + ", turn=" + turn;
     }
 }

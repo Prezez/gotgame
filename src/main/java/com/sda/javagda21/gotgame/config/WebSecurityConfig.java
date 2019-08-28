@@ -43,10 +43,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/test1").permitAll()
-                .antMatchers("/test2").hasRole("USER")
-                .antMatchers("/test3").hasRole("ADMIN")
-                .and()
-                .formLogin().permitAll()
+//                .antMatchers("/test2").hasRole("USER")
+//                .antMatchers("/test3").hasRole("ADMIN")
+//                .and()
+//                .formLogin().permitAll()
                 .and().csrf().disable();
     }
 
