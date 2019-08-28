@@ -28,7 +28,7 @@ public class ChatController {
     @PostMapping("/chatRegister")
     public String addMessageForm(@ModelAttribute Message message, Model model) {
         historyMessageService.addMessage(message.getValue());
-        historyMessageService.addMessage(message.getUser().getUsername());
+//        historyMessageService.addMessage(message.getPlayer());
         return "sendMessage";
     } //odbieranie wiadomości
 
