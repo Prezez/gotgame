@@ -1,8 +1,6 @@
 package com.sda.javagda21.gotgame.model;
 
 
-import com.sda.javagda21.gotgame.config.AppUser;
-
 public class Message {
 
     private String value;
