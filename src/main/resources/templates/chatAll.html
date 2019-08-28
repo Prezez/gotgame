@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:security="http://www.springframework.org/schema/security">
+<security:intercept-url pattern="/resources/**" access="permitAll" />
+
 
 <head>
     <meta charset="UTF-8">
