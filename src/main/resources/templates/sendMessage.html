@@ -6,8 +6,8 @@
 </head>
 <body>
 <form action="#" th:action="@{/chatRegister}" th:object="${message}" method="post">
-    <!--<p>Podaj nazwe: </br><input type="text" th:field="*{}"></p>-->
-    <!--<input type="submit" value="zapisz">-->
+    <p>Podaj nazwe: </br><input type="text" th:field="*{player}"></p>
+    <input type="submit" value="zapisz">
 
     <p>wiadomość: </br><input type="text" th:field="*{value}"></p>
     <p><input type="submit" value="Wyślij"></p>

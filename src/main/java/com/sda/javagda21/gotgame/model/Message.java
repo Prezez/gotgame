@@ -7,15 +7,24 @@ public class Message {
 
     private String value;
 
-    private AppUser user;
-
-    public AppUser getUser() {
-        return user;
+    public String getPlayer() {
+        return player;
     }
 
-    public void setUser(AppUser user) {
-        this.user = user;
+    public void setPlayer(String player) {
+        this.player = player;
     }
+
+    private String player;
+//    private AppUser user;
+
+//    public AppUser getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(AppUser user) {
+//        this.user = user;
+//    }
 
     public Message(String message) {
         this.value = message;
