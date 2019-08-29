@@ -2,6 +2,9 @@ package com.sda.javagda21.gotgame.gui;
 
 
 import com.sda.javagda21.gotgame.config.AppUser;
+import com.sda.javagda21.gotgame.repository.AppUserRepo;
+import com.sda.javagda21.gotgame.repository.PlayerRepository;
+import com.sda.javagda21.gotgame.service.PlayerService;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
@@ -11,12 +14,17 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
 
 @Route("waiting-room")
 @StyleSheet("../frontend/styles/stylesVd.css")
 public class WaitingRoomGui extends VerticalLayout {
 
-    AppUser appUser = new AppUser();
+    private AppUser appUser;
+
 
     public WaitingRoomGui() {
         Label namePlayer1 = new Label("Enter Your Name:");
@@ -25,12 +33,19 @@ public class WaitingRoomGui extends VerticalLayout {
         TextField textPlayer2 = new TextField();
 
 
-        Button button = new Button("Start Game");
-        Button button2 = new Button( "Refresh");
-        button2.addClickListener(clickEvent -> UI.getCurrent().getPage().reload());
-        button.addClickListener(e->{
-            button.getUI().ifPresent(ui -> ui.navigate("game"));});
 
+        Stream<Integer> stream = Stream.iterate(0, i -> i + 1);
+        stream.reduce((first, second) -> second).orElse(null);
+
+        Button button = new Button("Start Game");
+        Button button2 = new Button("Refresh");
+        button2.addClickListener(clickEvent -> UI.getCurrent().getPage().reload());
+
+        if (textPlayer1 != null && textPlayer2 != null) {
+            button.addClickListener(e ->
+                button.getUI().ifPresent(ui -> ui.navigate("game"))
+            );
+        }
 
 
         add(namePlayer1, textPlayer1, namePlayer2, textPlayer2, button2, button);
