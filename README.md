@@ -20,6 +20,10 @@ Technologies
     •	Vaadin
     •	Heroku
     •	Github
+    •	Thymeleaf
+    •	HTML
+    •	CSS
+    
 
 Authors
 
