@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:security="http://www.springframework.org/schema/security">
-<security:intercept-url pattern="/resources/**" access="permitAll" />
-
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<!--<link rel="stylesheet" href="stylChat.css" type="text/css"/>-->
 
 <head>
     <meta charset="UTF-8">
     <title>hello</title>
+
 </head>
-<FRAMESET ROWS="105,*" BORDER="0" FRAMEBORDER="0" FRAME SPACING="0">
-
-    <FRAMESET COLS="230,*" BORDER="0" FRAMEBORDER="0" FRAME SPACING="0">
-        <FRAME SRC="/sendMessage" NAME="sendMessage">
-        <FRAME SRC="/chatRegister" NAME="chatRegister">
-    </FRAMESET>
-</FRAMESET>
-</FRAMESET>
 <body>
-
-
+<div>
+    <iframe src="/sendMessage"></iframe>
+</div>
+<div>
+    <iframe src="/chatRegister"></iframe>
+</div>
+<div>
+</div>
 
 </body>
+
 </HTML>
