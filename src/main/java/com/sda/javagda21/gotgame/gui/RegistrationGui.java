@@ -3,6 +3,7 @@ package com.sda.javagda21.gotgame.gui;
 import com.sda.javagda21.gotgame.config.AppUser;
 import com.sda.javagda21.gotgame.repository.AppUserRepo;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.icon.Icon;
@@ -35,7 +36,8 @@ public class RegistrationGui extends VerticalLayout {
             AppUser appUser = new AppUser(username.getValue(), passwordEncoder.encode(password.getValue()),"ROLE_USER");
 
         appUserRepo.save(appUser);
-
+            UI.getCurrent().navigate("win");
+            UI.getCurrent().getPage().reload();
 
         });
         add(username,password,buttonHello);

@@ -3,7 +3,9 @@ package com.sda.javagda21.gotgame;
 
 
 import com.sda.javagda21.gotgame.entity.Army;
+import com.sda.javagda21.gotgame.repository.AppUserRepo;
 import com.sda.javagda21.gotgame.service.PlayerService;
+import com.sda.javagda21.gotgame.service.UserDetailsServiceImpl;
 
 import java.util.Arrays;
 
@@ -21,6 +23,7 @@ public class main {
 //        Map map = Map.createNewMap();
 //        System.out.println("------------------");
 //        System.out.println(map.surroundingFields(10));
+
 
     }
 }

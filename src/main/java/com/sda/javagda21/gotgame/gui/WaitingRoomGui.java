@@ -13,6 +13,8 @@ import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +29,16 @@ public class WaitingRoomGui extends VerticalLayout {
 
 
     public WaitingRoomGui() {
+
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String username;
+        if (principal instanceof UserDetails) {
+            username = ((UserDetails)principal).getUsername();
+        } else {
+            username = principal.toString();
+        }
+
+
         Label namePlayer1 = new Label("Enter Your Name:");
         TextField textPlayer1 = new TextField();
         Label namePlayer2 = new Label("Waiting for second Player: ");
