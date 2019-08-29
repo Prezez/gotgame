@@ -31,8 +31,6 @@ public class AppUser implements UserDetails {
     public AppUser() {
     }
 
-
-
     public Long getId() {
         return id;
     }

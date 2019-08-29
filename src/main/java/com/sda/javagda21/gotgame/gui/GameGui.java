@@ -19,6 +19,8 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +50,26 @@ public class GameGui extends VerticalLayout {
         players = playerService.loadPlayers(fields, playerOneName, playerTwoName);
 
         activePlayer = playerService.getActivePlayer(players[0], players[1]);
+
+        HorizontalLayout playerStatus = new HorizontalLayout();
+        Label playerLabel = new Label();
+        playerLabel.setText("Player : " + activePlayer.getName());
+        playerLabel.setMinHeight("50px");
+        playerLabel.setMinWidth("100px");
+        playerLabel.setTitle("Player");
+        Label playerGoldLabel = new Label();
+        playerGoldLabel.setText("Gold : " + activePlayer.getGold());
+        playerGoldLabel.setMinHeight("50px");
+        playerGoldLabel.setMinWidth("100px");
+        playerGoldLabel.setTitle("Gold");
+        Label playerWarriorLabel = new Label();
+        playerWarriorLabel.setText("Warriors : " + activePlayer.getArmy());
+        playerWarriorLabel.setMinHeight("50px");
+        playerWarriorLabel.setMinWidth("100px");
+        playerWarriorLabel.setTitle("Warriors");
+
+        playerStatus.add(playerLabel, playerGoldLabel, playerWarriorLabel);
+        add(playerStatus);
 
         for (int i = 0; i < fields.length; i++) {
             HorizontalLayout hl = new HorizontalLayout();
@@ -142,9 +164,13 @@ public class GameGui extends VerticalLayout {
         add(buttonOptionsLayout);
 
         Button createNewGameButton = new Button();
-        createNewGameButton.addClickListener(click ->{
+        createNewGameButton.addClickListener(click -> {
             map = mapService.resetMap();
             players = playerService.resetPlayers(playerOneName, playerTwoName);
+            UI.getCurrent().getPage().reload();
+
+//            TODO: dodatkowe okienko potwierdzające wybór
+//            TODO: tylko jeden atak na turę
         });
         createNewGameButton.setText("Start New Game");
         createNewGameButton.setMinWidth("630px");
