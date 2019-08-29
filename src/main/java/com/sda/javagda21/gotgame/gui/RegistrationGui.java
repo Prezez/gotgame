@@ -36,7 +36,7 @@ public class RegistrationGui extends VerticalLayout {
             AppUser appUser = new AppUser(username.getValue(), passwordEncoder.encode(password.getValue()),"ROLE_USER");
 
         appUserRepo.save(appUser);
-            UI.getCurrent().navigate("win");
+            UI.getCurrent().navigate("main-menu");
             UI.getCurrent().getPage().reload();
 
         });

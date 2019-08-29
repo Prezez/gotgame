@@ -33,38 +33,30 @@ public class WaitingRoomGui extends VerticalLayout {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String username;
         if (principal instanceof UserDetails) {
-            username = ((UserDetails)principal).getUsername();
+            username = ((UserDetails) principal).getUsername();
         } else {
             username = principal.toString();
         }
 
 
-        Label namePlayer1 = new Label("Enter Your Name:");
-        TextField textPlayer1 = new TextField();
+        Label namePlayer1 = new Label(username);
         Label namePlayer2 = new Label("Waiting for second Player: ");
         TextField textPlayer2 = new TextField();
 
-
-
-
-
-//        Stream<Integer> stream = Stream.iterate(0, i -> i + 1);
-//        stream.reduce((first, second) -> second).orElse(null);
 
         Button button = new Button("Start Game");
         Button button2 = new Button("Refresh");
         button2.addClickListener(clickEvent -> UI.getCurrent().getPage().reload());
 
-            button.addClickListener(e -> {
-                if (!textPlayer1.getValue().equals("") && !textPlayer2.getValue().equals("")) {
-                    button.getUI().ifPresent(ui -> ui.navigate("game"));
-                }
-            });
+//            button.addClickListener(e -> {
+//                if (!namePlayer1.getValue().equals("") && !textPlayer2.getValue().equals("")) {
+//                    button.getUI().ifPresent(ui -> ui.navigate("game"));
+//                }
+//            });
 
 
+        add(namePlayer1, namePlayer2, textPlayer2, button2, button);
 
-        add(namePlayer1, textPlayer1, namePlayer2, textPlayer2, button2, button);
+
     }
-
-
 }
