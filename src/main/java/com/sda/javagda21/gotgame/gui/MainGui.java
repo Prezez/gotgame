@@ -25,7 +25,7 @@ public class MainGui extends VerticalLayout {
 
         start.addClickListener( e-> {
             start.getUI().ifPresent(ui -> ui.navigate("waiting-room"));
-
+            UI.getCurrent().getPage().reload();
                 });
         add(label, start, options, ranking, exit);
 

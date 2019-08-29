@@ -3,10 +3,13 @@ package com.sda.javagda21.gotgame.gui;
 
 import com.sda.javagda21.gotgame.config.AppUser;
 import com.sda.javagda21.gotgame.service.AppUserService;
+import com.vaadin.flow.component.PollEvent;
 import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.data.provider.DataChangeEvent;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -34,42 +37,26 @@ public class WaitingRoomGui extends VerticalLayout {
         List<AppUser> users = appUserService.findAll();
         System.out.println("Liczba" + users.size());
 
-
-
-        do {
-            if (users.size() <2){
-//                Thread.sleep(5000);
-                UI.getCurrent().getPage().reload();}
-            else {
-                String playerOne = users.get(0).getUsername();
-                String playerTwo = users.get(1).getUsername();
-                VaadinSession.getCurrent().getSession().setAttribute("playerOne", playerOne);
-                VaadinSession.getCurrent().getSession().setAttribute("playerTwo", playerTwo);
-                UI.getCurrent().navigate("game");
-                UI.getCurrent().getPage().reload();
-            }
-        } while (users.size() < 2);
-
-
-
         Label namePlayer1 = new Label(username);
-        Label namePlayer2 = new Label("Waiting for second Player: ");
-//        TextField textPlayer2 = new TextField();
+        Label namePlayer2 = new Label("Waiting for second Player! Please wait... ");
+        Button refreshButton = new Button("Refresh");
+        refreshButton.addClickListener(clickEvent -> UI.getCurrent().getPage().reload());
+        add(namePlayer1, namePlayer2, refreshButton);
 
-
-//        Button button = new Button("Start Game");
-//        Button button2 = new Button("Refresh");
-//        button2.addClickListener(clickEvent -> UI.getCurrent().getPage().reload());
-
-//            button.addClickListener(e -> {
-//                if (!namePlayer1.getValue().equals("") && !textPlayer2.getValue().equals("")) {
-//                    button.getUI().ifPresent(ui -> ui.navigate("game"));
-//                }
-//            });
-
-
-        add(namePlayer1, namePlayer2);
-
+//        UI.getCurrent().setPollInterval(10000);
+//
+//UI.getCurrent().addPollListener(UI.getCurrent().addPollListener(pollEvent -> {}));
+        if (users.size() < 2) {
+            Thread.sleep(5000);
+            UI.getCurrent().getPage().reload();
+        } else {
+            String playerOne = users.get(0).getUsername();
+            String playerTwo = users.get(1).getUsername();
+            VaadinSession.getCurrent().getSession().setAttribute("playerOne", playerOne);
+            VaadinSession.getCurrent().getSession().setAttribute("playerTwo", playerTwo);
+            UI.getCurrent().navigate("game");
+            UI.getCurrent().getPage().reload();
+        }
 
     }
 }
