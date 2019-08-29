@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <title>MAIN MENU</title>
     <link href="../static/styles.css" th:href="@{/styles.css}" rel="stylesheet" />
-
+    <!--<embed src="/music/lord_of_the_rings.mp3" loop="true" hidden="true" autostart="true">-->
 </head>
 <body background="/image/mount-and-blade.jpg">
+
+<audio src="/music/lord_of_the_rings.mp3" autoplay>
+    <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+    <embed src="/music/lord_of_the_rings.mp3" width="180" height="90" hidden="true" />
+</audio>
 
 <br/>
 <br/>
@@ -15,7 +20,7 @@
 <form action="/main-menu" method="post">
     <br/>
     <div class="menu">
-        <div class="button_cont" align="center"><a class="example_f" href="/waiting-room" rel="nofollow"><span>START GAME</span></a></div><br/>
+        <div class="button_cont" align="center"><a class="example_f" href="/waiting-room" rel="nofollow"><span>START GAME</span></a></div><br/><div class="button_cont" align="center"><a class="example_f" href="/registration" rel="nofollow"><span>REGISTER</span></a></div><br/>
         <div class="button_cont" align="center"><a class="example_f" href="/ranking" rel="nofollow"><span>RANKING</span></a></div><br/>
         <div class="button_cont" align="center"><a class="example_f" href="/exit" rel="nofollow"><span>EXIT</span></a></div>
             <br/>
