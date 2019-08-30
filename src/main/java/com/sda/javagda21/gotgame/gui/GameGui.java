@@ -10,7 +10,9 @@ import com.sda.javagda21.gotgame.service.MapService;
 import com.sda.javagda21.gotgame.service.PlayerService;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.dependency.JavaScript;
 import com.vaadin.flow.component.dependency.StyleSheet;
+import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.notification.Notification;
@@ -30,7 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Route("game")
-//@StyleSheet("vaadin://gameStyle.css")
+//@StyleSheet("C:\\Users\\D\\IdeaProjects\\gotgame\\src\\main\\webapp\\VAADIN\\gameStyle.css")
 public class GameGui extends VerticalLayout {
 
     Map map;
@@ -46,9 +48,7 @@ public class GameGui extends VerticalLayout {
     @Autowired
     public GameGui(MapService mapService, FieldsService fieldsService, PlayerService playerService, GameService gameService) {
 
-//        TODO: CSS
-        UI.getCurrent().getPage()
-                .addStyleSheet("src/main/webapp/VAADIN/gameStyle.css", LoadMode.EAGER);
+        UI.getCurrent().getPage().addStyleSheet("/VAADIN/gameStyle.css");
 
         map = mapService.loadMap();
 
@@ -64,23 +64,25 @@ public class GameGui extends VerticalLayout {
         HorizontalLayout playerStatus = new HorizontalLayout();
         Label playerLabel = new Label();
         playerLabel.setText("Player : " + activePlayer.getName());
-        playerLabel.setMinHeight("50px");
-        playerLabel.setMinWidth("100px");
+        playerLabel.setMinHeight("30px");
+        playerLabel.setMinWidth("150px");
         playerLabel.setTitle("Player");
+        playerLabel.setClassName("Status");
         Label playerGoldLabel = new Label();
         playerGoldLabel.setText("Gold : " + activePlayer.getGold());
-        playerGoldLabel.setMinHeight("50px");
-        playerGoldLabel.setMinWidth("100px");
+        playerGoldLabel.setMinHeight("30px");
+        playerGoldLabel.setMinWidth("150px");
         playerGoldLabel.setTitle("Gold");
+        playerGoldLabel.setClassName("Status");
         Label playerWarriorLabel = new Label();
         playerWarriorLabel.setText("Warriors : " + activePlayer.getArmy());
-        playerWarriorLabel.setMinHeight("50px");
-        playerWarriorLabel.setMinWidth("100px");
+        playerWarriorLabel.setMinHeight("30px");
+        playerWarriorLabel.setMinWidth("150px");
         playerWarriorLabel.setTitle("Warriors");
+        playerWarriorLabel.setClassName("Status");
 
         playerStatus.add(playerLabel, playerGoldLabel, playerWarriorLabel);
         add(playerStatus);
-
 
 
         for (int i = 0; i < fields.length; i++) {
@@ -93,6 +95,7 @@ public class GameGui extends VerticalLayout {
                 label.setMinHeight("100px");
                 label.setId(String.valueOf(fields[i][j].getFieldNo()));
                 label.setClassName(fields[i][j].getOwner().getColor());
+//                label.setVisible(activePlayer.getName().equals(fields[i][j].getOwner().getName()));
 
 
                 if (fieldsService.checkIfSurroundingFieldsHasAnOwner(activePlayer, fields[i][j], map)) {
@@ -179,6 +182,7 @@ public class GameGui extends VerticalLayout {
         buttonOptionsLayout.add(buyWarriorsButton);
         add(buttonOptionsLayout);
 
+
         Button createNewGameButton = new Button();
         createNewGameButton.addClickListener(click -> {
             map = mapService.resetMap();
@@ -189,6 +193,7 @@ public class GameGui extends VerticalLayout {
 //            TODO: kolorowanie labels
 //            TODO: login - blokowanie resources
 //            TODO: heroku
+//            TODO: CSS
         });
         createNewGameButton.setText("Start New Game");
         createNewGameButton.setMinWidth("630px");

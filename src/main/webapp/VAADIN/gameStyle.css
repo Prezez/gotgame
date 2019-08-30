@@ -1,7 +1,14 @@
-label.green{
+.green {
     background-color: greenyellow;
 }
 
-label.red{
+.red {
     background-color: red;
 }
+
+.Status {
+    background-color: lightgray;
+    font-size: large;
+    font-style: oblique;
+    text-align: center;
+    }
