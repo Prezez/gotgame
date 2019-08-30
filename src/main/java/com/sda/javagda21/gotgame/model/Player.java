@@ -15,11 +15,12 @@ public class Player {
 
     private String name;
 
-
     private int gold;
 
     private int turn;
     private int army;
+
+    private String color;
 
     public Player() {
     }
@@ -71,6 +72,13 @@ public class Player {
         this.turn = turn;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 
     @Override
     public boolean equals(Object o) {
