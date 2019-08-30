@@ -21,6 +21,7 @@ public class MapService {
         Random random = new Random();
         Player player = new Player();
         player.setName("neutral");
+        player.setColor("neutral");
 
         for (int i = 0; i < MAX_SIZE; i++) {
             for (int j = 0; j < MAX_SIZE; j++) {
@@ -29,8 +30,6 @@ public class MapService {
                 field[i][j] = newField;
             }
         }
-
-
         return map;
     }
 
@@ -58,7 +57,6 @@ public class MapService {
                 }
             }
         }
-
         System.out.println(player.getName() + " ma " + result);
         return result;
     }

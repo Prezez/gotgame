@@ -10,14 +10,18 @@ import com.sda.javagda21.gotgame.service.MapService;
 import com.sda.javagda21.gotgame.service.PlayerService;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.dom.Style;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
+import com.vaadin.flow.shared.ui.LoadMode;
+import com.vaadin.flow.theme.Theme;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,6 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Route("game")
+//@StyleSheet("vaadin://gameStyle.css")
 public class GameGui extends VerticalLayout {
 
     Map map;
@@ -37,8 +42,13 @@ public class GameGui extends VerticalLayout {
     String playerOneName;
     String playerTwoName;
 
+
     @Autowired
     public GameGui(MapService mapService, FieldsService fieldsService, PlayerService playerService, GameService gameService) {
+
+//        TODO: CSS
+        UI.getCurrent().getPage()
+                .addStyleSheet("src/main/webapp/VAADIN/gameStyle.css", LoadMode.EAGER);
 
         map = mapService.loadMap();
 
@@ -71,6 +81,8 @@ public class GameGui extends VerticalLayout {
         playerStatus.add(playerLabel, playerGoldLabel, playerWarriorLabel);
         add(playerStatus);
 
+
+
         for (int i = 0; i < fields.length; i++) {
             HorizontalLayout hl = new HorizontalLayout();
             for (int j = 0; j < fields[i].length; j++) {
@@ -80,7 +92,8 @@ public class GameGui extends VerticalLayout {
                 label.setMinWidth("100px");
                 label.setMinHeight("100px");
                 label.setId(String.valueOf(fields[i][j].getFieldNo()));
-                label.setClassName(fields[i][j].getOwner().getName());
+                label.setClassName(fields[i][j].getOwner().getColor());
+
 
                 if (fieldsService.checkIfSurroundingFieldsHasAnOwner(activePlayer, fields[i][j], map)) {
                     Button button = new Button();
