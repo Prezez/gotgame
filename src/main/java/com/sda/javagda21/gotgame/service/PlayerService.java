@@ -117,7 +117,9 @@ public class PlayerService {
         players = new Player[2];
 
         Player player1 = setupStartingPlayerParameters(playerOneName);
+        player1.setColor("green");
         Player player2 = setupStartingPlayerParameters(playerTwoName);
+        player2.setColor("red");
 
         players[0] = player1;
         players[1] = player2;
