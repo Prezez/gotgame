@@ -10,6 +10,7 @@ import com.sda.javagda21.gotgame.service.MapService;
 import com.sda.javagda21.gotgame.service.PlayerService;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.notification.Notification;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Route("game")
+@StyleSheet("stylesVd.css")
 public class GameGui extends VerticalLayout {
 
     Map map;
@@ -71,6 +73,7 @@ public class GameGui extends VerticalLayout {
         playerStatus.add(playerLabel, playerGoldLabel, playerWarriorLabel);
         add(playerStatus);
 
+
         for (int i = 0; i < fields.length; i++) {
             HorizontalLayout hl = new HorizontalLayout();
             for (int j = 0; j < fields[i].length; j++) {
@@ -85,7 +88,7 @@ public class GameGui extends VerticalLayout {
                 if (fieldsService.checkIfSurroundingFieldsHasAnOwner(activePlayer, fields[i][j], map)) {
                     Button button = new Button();
                     Field field = fields[i][j];
-                    button.setText("Atakuj");
+                    button.setText("Attack!");
                     button.setMinWidth("100px");
                     button.setMinHeight("100px");
                     button.setId(String.valueOf(fields[i][j].getFieldNo()));
@@ -188,7 +191,6 @@ public class GameGui extends VerticalLayout {
         }
 
     }
-
 }
 
 
