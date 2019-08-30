@@ -134,6 +134,7 @@ public class PlayerService {
         player.setGold(STARTING_GOLD);
         player.setTurn(1);
         player.setArmy(STARTING_ARMY);
+        player.setAttacked(false);
 
         return player;
     }

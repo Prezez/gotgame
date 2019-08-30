@@ -102,6 +102,7 @@ public class GameGui extends VerticalLayout {
                     button.setMinWidth("100px");
                     button.setMinHeight("100px");
                     button.setId(String.valueOf(fields[i][j].getFieldNo()));
+                    button.setEnabled(!activePlayer.isAttacked());
                     button.addClickListener(buttonClickEvent -> {
                         int[] resultTable = playerService.fight(activePlayer.getArmy(), field.getWarriorNo());
                         if (resultTable[0] > resultTable[1]) {
@@ -122,6 +123,7 @@ public class GameGui extends VerticalLayout {
                             grid.setItems(fieldList);
 
                         }
+                        activePlayer.setAttacked(true);
                         mapService.save(map);
                         UI.getCurrent().getPage().reload();
                     });
@@ -147,6 +149,7 @@ public class GameGui extends VerticalLayout {
             activePlayer.setTurn(activePlayerTurnNo + 1);
             Integer numberOfFieldsOwned = mapService.numberOfFieldsOwned(activePlayer);
             playerService.increaseGoldAmount(activePlayer, numberOfFieldsOwned);
+            activePlayer.setAttacked(false);
             mapService.save(map);
 
             UI.getCurrent().getPage().reload();
@@ -183,7 +186,9 @@ public class GameGui extends VerticalLayout {
             UI.getCurrent().getPage().reload();
 
 //            TODO: dodatkowe okienko potwierdzające wybór
-//            TODO: tylko jeden atak na turę
+//            TODO: kolorowanie labels
+//            TODO: login - blokowanie resources
+//            TODO: heroku
         });
         createNewGameButton.setText("Start New Game");
         createNewGameButton.setMinWidth("630px");

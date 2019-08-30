@@ -22,6 +22,8 @@ public class Player {
 
     private String color;
 
+    private boolean attacked;
+
     public Player() {
     }
 
@@ -80,6 +82,14 @@ public class Player {
         this.color = color;
     }
 
+    public boolean isAttacked() {
+        return attacked;
+    }
+
+    public void setAttacked(boolean attacked) {
+        this.attacked = attacked;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -103,6 +113,7 @@ public class Player {
 
                 "Player: " + name +
                         " has: gold= " + gold +
-                        ", army=" + army + ", turn=" + turn;
+                        ", army=" + army + ", turn=" + turn +
+                        ", attacked: " + attacked;
     }
 }
