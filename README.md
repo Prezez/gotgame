@@ -3,33 +3,33 @@
 
 # GOTGAME
 
-Strategy game, victory requires above all thinking and planning skills. The game highlights the challenges in terms of strategy     and logistics. Gotgame is a student project. Is the final project of the "Java from scratch" course at Software Development   Academy.
+Strategy game, where victory requires highly developed thinking and planning skills. The game highlights the challenges in terms of strategy   and logistics. Gotgame is a student project. It is the final project of the "Java from scratch" course at Software Development   Academy.
 
 Link to the online application
 
-   [GIT](https://www.google.com)
-   [HEROKU](https://www.google.com)
+   [GIT](https://github.com/Prezez/gotgame)
    
-# User Documentation
-The application is a strategy game. It is used for fun, but also dispels logical thinking. 
+   [HEROKU](https://got-game-best.herokuapp.com/main-menu)
+   
+# User documentation:
+The application is a strategy game. It is used for fun, but also developes logical thinking. 
 An application designed for anyone without an age range.
 The user must register and log in to use the application.
+Example users are created with below credentials:
+UserName: Jan, Password: 123
+UserName: Jim, Password: 123
 
 # Screen:
 
-<a href=https://zapodaj.net/843e5f20bba8f.jpg.html><img src=https://zapodaj.net/843e5f20bba8f.jpg.html alt=hostowane przez Zapodaj.net /></a>
-<a href=https://zapodaj.net/df0090d35c3b2.png.html><img src=https://zapodaj.net/df0090d35c3b2.png.html alt=hostowane przez Zapodaj.net /></a>
-
-
-<a href=https://zapodaj.net/843e5f20bba8f.jpg.html>sc1.jpg</a> 
-<a href=https://zapodaj.net/df0090d35c3b2.png.html>sc2.png</a> 
-<a href=https://zapodaj.net/7fd55447429f8.png.html>sc3.png</a>  
+<a href=https://zapodaj.net/e6fa4f73fb15e.jpg.html><img src=https://zapodaj.net/images/e6fa4f73fb15e.jpg alt=hostowane przez Zapodaj.net /></a>
+<a href=https://zapodaj.net/8fd6eb1b7368f.png.html><img src=https://zapodaj.net/images/8fd6eb1b7368f.png alt=hostowane przez Zapodaj.net /></a>
+<a href=https://zapodaj.net/27178f74f352f.png.html><img src=https://zapodaj.net/images/27178f74f352f.png alt=hostowane przez Zapodaj.net /></a>
 			
-# Technologies
+# Technologies:
 
  Project is created with:
     
-  •   Java 8
+  •     Java 8
   
   •	Spring
   
@@ -52,7 +52,7 @@ The user must register and log in to use the application.
   •	CSS
     
 
-# Authors
+# Authors:
 
   • Katarzyna Zawisza   
   [LinkedIn](https://www.linkedin.com/in/katarzyna-zawisza-18998bba/)  
@@ -71,15 +71,18 @@ The user must register and log in to use the application.
    [LinkedIn](https://www.linkedin.com/in/przemyslaw-bykowski/)      
 
 
-# Functionalities
+# Functionalities:
 
-    User registration - the client entering the gotgame application must change.
-    Army - the user has his own army which fights with the other player
-    Field - place of the ongoing duel
-    Gold - a kind of currency. The goal is to buy an army.
-    Map - less of the ongoing battle
-    Turn - time for the player to perform an action in the game.
-    (Trzeba by lepiej opisać funkcjonaloności, Jakie sa I co robią)
-
+   User registration - the client entering the gotgame application must change.
+   Army - the user has his own army which fights with the other player
+   Attack - attack the neutral army or your opponent
+   Field - place of the ongoing duel
+   Gold - a kind of currency. The goal is to buy an army.
+   Map - less of the ongoing battle
+   Turn - time for the player to perform an action in the game.
+   Create a new game - resets ongoing game.
+   Hot-seat version - play on one computer.
+   
+   
 
 
