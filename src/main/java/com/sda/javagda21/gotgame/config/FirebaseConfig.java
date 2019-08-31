@@ -13,7 +13,7 @@ public class FirebaseConfig {
 
     public FirebaseConfig() throws IOException {
         FileInputStream serviceAccount =
-                new FileInputStream("src\\main\\resources\\static\\friendlychat-b2806-firebase-adminsdk-zttwa-a318ab83ec.json");
+                new FileInputStream("classpath:static\\friendlychat-b2806-firebase-adminsdk-zttwa-a318ab83ec.json");
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                 .setDatabaseUrl("https://friendlychat.firebaseio.com")
