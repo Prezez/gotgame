@@ -7,9 +7,9 @@ Strategy game, victory requires above all thinking and planning skills. The game
 
 Link to the online application
 
-   (https://www.google.com)
-   
-   (https://www.linkedin.com/in/damian-rybka-8269a868/)
+   [GIT](https://www.google.com)
+   [HEROKU](https://www.google.com)
+  
 
 # Technologies
 
