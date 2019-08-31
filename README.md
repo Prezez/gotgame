@@ -41,7 +41,7 @@ Link to the online application
    •	Tomasz Piotrowski           
    [LinkedIn](https://www.linkedin.com/in/tomasz-piotrowski-088872156/)
    
-   •  Damian Rybka                 (
+   •  Damian Rybka                 
    [LinkedIn]https://www.linkedin.com/in/damian-rybka-8269a868/)
    
      
