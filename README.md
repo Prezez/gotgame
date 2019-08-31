@@ -11,6 +11,7 @@ Link to the online application
 
    (https://www.google.com)
     [I'm an inline-style link](https://www.google.com)
+    (https://www.linkedin.com/in/damian-rybka-8269a868/)
 
 # Technologies
 
