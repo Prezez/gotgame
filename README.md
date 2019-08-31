@@ -3,41 +3,41 @@
 
 # GOTGAME
 
-    A strategy game with chat. Victory requires above all thinking and planning skills. 
-    The game highlights the challenges in terms of strategy and logistics. Gotgame is a student project. 
-    Is part of the language of the "Java from scratch" course at Software Development Academy.
+A strategy game with chat. Victory requires above all thinking and planning skills. 
+The game highlights the challenges in terms of strategy and logistics. Gotgame is a student project. 
+Is part of the language of the "Java from scratch" course at Software Development Academy.
 
 Link to the online application
 
    (https://www.google.com)
    
-    (https://www.linkedin.com/in/damian-rybka-8269a868/)
+   (https://www.linkedin.com/in/damian-rybka-8269a868/)
 
 # Technologies
 
-    Project is created with:
+ Project is created with:
     
-    •	Java 8
-    •	Spring
-    •	Maven
-    •	MySQL
-    •	Hibernate
-    •	Vaadin
-    •	Heroku
-    •	Github
-    •	Thymeleaf
-    •	HTML
-    •	CSS
+  • Java 8
+  •	Spring
+  •	Maven
+  •	MySQL
+  •	Hibernate
+  •	Vaadin
+  •	Heroku
+  •	Github
+  •	Thymeleaf
+  •	HTML
+  •	CSS
     
 
 # Authors
 
-    •	Dawid Procajło             (https://www.linkedin.com/in/damian-rybka-8269a868/)
-    •	Katarzyna Zawisza         [I'm an inline-style link](https://www.google.com)  
-    •	Tomasz Piotrowski        [I'm an inline-style link](https://www.google.com)
-    •	Damian Rybka                [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-    •	supervision of : Przemysław Bykowski         
+   •	Dawid Procajło            [LINKEDIN](https://www.linkedin.com/in/dawid-procaj%C5%82o-a76697168/)
+   •	Katarzyna Zawisza         [LINKEDIN](https://www.linkedin.com/in/katarzyna-zawisza-18998bba/)  
+   •	Tomasz Piotrowski         [LINKEDIN](https://www.linkedin.com/in/tomasz-piotrowski-088872156/)
+   •    Damian Rybka              [LINKEDIN](https://www.linkedin.com/in/damian-rybka-8269a868/)
+     
+   •	supervision of : Przemysław Bykowski   [LINKEDIN](https://www.linkedin.com/in/przemyslaw-bykowski/)      
 
 
 # Functionalities
