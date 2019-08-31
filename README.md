@@ -38,6 +38,17 @@ Link to the online application
 
     •	supervision of : Przemysław Bykowski         
     [I'm an inline-style link](https://www.google.com)
+    
+    [I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
 # Functionalities
 
     User registration - the client entering the gotgame application must change.
