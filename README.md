@@ -3,7 +3,7 @@
 
 # GOTGAME
 
-Strategy game, victory requires above all thinking and planning skills. The game highlights the challenges in terms of strategy     and logistics. Gotgame is a student project. Is the final project of the "Java from scratch" course at Software Development   Academy.
+Strategy game, where victory requires highly developed thinking and planning skills. The game highlights the challenges in terms of strategy   and logistics. Gotgame is a student project. It is the final project of the "Java from scratch" course at Software Development   Academy.
 
 Link to the online application
 
@@ -12,9 +12,12 @@ Link to the online application
    [HEROKU](https://got-game-best.herokuapp.com/main-menu)
    
 # User documentation:
-The application is a strategy game. It is used for fun, but also dispels logical thinking. 
+The application is a strategy game. It is used for fun, but also developes logical thinking. 
 An application designed for anyone without an age range.
 The user must register and log in to use the application.
+Example users are created with below credentials:
+UserName: Jan, Password: 123
+UserName: Jim, Password: 123
 
 # Screen:
 
@@ -72,10 +75,14 @@ The user must register and log in to use the application.
 
    User registration - the client entering the gotgame application must change.
    Army - the user has his own army which fights with the other player
+   Attack - attack the neutral army or your opponent
    Field - place of the ongoing duel
    Gold - a kind of currency. The goal is to buy an army.
    Map - less of the ongoing battle
    Turn - time for the player to perform an action in the game.
+   Create a new game - resets ongoing game.
+   Hot-seat version - play on one computer.
+   
    
 
 
