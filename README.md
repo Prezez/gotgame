@@ -9,7 +9,14 @@ Link to the online application
 
    [GIT](https://www.google.com)
    [HEROKU](https://www.google.com)
-  
+   
+# User Documentation
+The application is a strategy game. It is used for fun, but also dispels logical thinking. 
+An application designed for anyone without an age range.
+
+The first user logs in with the username _"Jan"_** and password _"123"_**
+The other user logs in with the username _"Jim"_** and password _"123"_**
+It is also possible to register for a new account.
 
 # Technologies
 
