@@ -3,51 +3,48 @@
 
 # GOTGAME
 
-    A strategy game with chat. Victory requires above all thinking and planning skills. 
-    The game highlights the challenges in terms of strategy and logistics. Gotgame is a student project. 
-    Is part of the language of the "Java from scratch" course at Software Development Academy.
+A strategy game with chat. Victory requires above all thinking and planning skills. 
+The game highlights the challenges in terms of strategy and logistics. Gotgame is a student project. 
+Is part of the language of the "Java from scratch" course at Software Development Academy.
 
 Link to the online application
 
    (https://www.google.com)
-    [I'm an inline-style link](https://www.google.com)
+   
+   (https://www.linkedin.com/in/damian-rybka-8269a868/)
 
 # Technologies
 
-    Project is created with:
+ Project is created with:
     
-    •	Java 8
-    •	Spring
-    •	Maven
-    •	MySQL
-    •	Hibernate
-    •	Vaadin
-    •	Heroku
-    •	Github
-    •	Thymeleaf
-    •	HTML
-    •	CSS
+  • Java 8
+  •	Spring
+  •	Maven
+  •	MySQL
+  •	Hibernate
+  •	Vaadin
+  •	Heroku
+  •	Github
+  •	Thymeleaf
+  •	HTML
+  •	CSS
     
 
 # Authors
 
-    •	Dawid Procajło            [I'm an inline-style link](https://www.linkedin.com/in/damian-rybka-8269a868/)   
-    •	Katarzyna Zawisza         [I'm an inline-style link](https://www.google.com)  
-    •	Tomasz Piotrowski        [I'm an inline-style link](https://www.google.com)
-    •	Damian Rybka                (https://www.linkedin.com/in/damian-rybka-8269a868/)
+   Katarzyna Zawisza   
+   [LinkedIn](https://www.linkedin.com/in/katarzyna-zawisza-18998bba/)  
+   Dawid Procajło               
+   [LinkedIn](https://www.linkedin.com/in/dawid-procaj%C5%82o-a76697168/)
+   Tomasz Piotrowski           
+   [LinkedIn](https://www.linkedin.com/in/tomasz-piotrowski-088872156/)
+   Damian Rybka                 
+   [LinkedIn]https://www.linkedin.com/in/damian-rybka-8269a868/)
+   
+     
+   •	Supervision of : Przemysław Bykowski   
+   [LinkedIn](https://www.linkedin.com/in/przemyslaw-bykowski/)      
 
-    •	supervision of : Przemysław Bykowski         
-    [I'm an inline-style link](https://www.google.com)
-    
-    [I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
 
 # Functionalities
 

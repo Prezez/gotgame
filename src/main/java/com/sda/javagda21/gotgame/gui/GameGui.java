@@ -40,6 +40,7 @@ public class GameGui extends VerticalLayout {
     @Autowired
     public GameGui(MapService mapService, FieldsService fieldsService, PlayerService playerService, GameService gameService) {
 
+
         UI.getCurrent().getPage().addStyleSheet("/VAADIN/gameStyle.css");
 
         map = mapService.loadMap();
