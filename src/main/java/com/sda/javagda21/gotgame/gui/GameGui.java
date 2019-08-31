@@ -93,7 +93,7 @@ public class GameGui extends VerticalLayout {
                 if (fieldsService.checkIfSurroundingFieldsHasAnOwner(activePlayer, fields[i][j], map)) {
                     Button button = new Button();
                     Field field = fields[i][j];
-                    button.setText("Atakuj");
+                    button.setText("Attack!");
                     button.setMinWidth("100px");
                     button.setMinHeight("100px");
                     button.setId(String.valueOf(fields[i][j].getFieldNo()));
