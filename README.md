@@ -1,7 +1,7 @@
 <a href=https://zapodaj.net/578f1ba5eca78.jpg.html><img src=https://zapodaj.net/images/578f1ba5eca78.jpg alt=hostowane przez Zapodaj.net /></a>
 
 
-# GOTGAME
+#GOTGAME
 
     A strategy game with chat. Victory requires above all thinking and planning skills. 
     The game highlights the challenges in terms of strategy and logistics. Gotgame is a student project. 
@@ -12,7 +12,7 @@ Link to the online application
    (https://www.google.com)
 
 
-Technologies
+#Technologies
 
     Project is created with:
     
@@ -29,7 +29,7 @@ Technologies
     •	CSS
     
 
-Authors
+#Authors
 
     •	Dawid Procajło             
     •	Katarzyna Zawisza           
@@ -38,7 +38,7 @@ Authors
 
     •	supervision of : Przemysław Bykowski         
 
-Functionalities
+#Functionalities
 
     User registration - the client entering the gotgame application must change.
     Army - the user has his own army which fights with the other player
