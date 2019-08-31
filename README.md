@@ -3,15 +3,13 @@
 
 # GOTGAME
 
-A strategy game with chat. Victory requires above all thinking and planning skills. 
-The game highlights the challenges in terms of strategy and logistics. Gotgame is a student project. 
-Is part of the language of the "Java from scratch" course at Software Development Academy.
+Strategy game, victory requires above all thinking and planning skills. The game highlights the challenges in terms of strategy     and logistics. Gotgame is a student project. Is the final project of the "Java from scratch" course at Software Development   Academy.
 
 Link to the online application
 
-   (https://www.google.com)
-   
-   (https://www.linkedin.com/in/damian-rybka-8269a868/)
+   [GIT](https://www.google.com)
+   [HEROKU](https://www.google.com)
+  
 
 # Technologies
 
