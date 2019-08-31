@@ -16,6 +16,7 @@ The application is a strategy game. It is used for fun, but also developes logic
 An application designed for anyone without an age range.
 The user must register and log in to use the application.
 Example users are created with below credentials:
+
 UserName: Jan, Password: 123
 UserName: Jim, Password: 123
 
