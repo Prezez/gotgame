@@ -20,13 +20,15 @@ public class AppUser implements UserDetails {
     private String username;
     private String password;
     private String role;
+    private boolean active;
 
-    public AppUser(String username, String password, String role) {
-
+    public AppUser(String username, String password, String role, boolean active) {
         this.username = username;
         this.password = password;
         this.role = role;
+        this.active = active;
     }
+
 
     public AppUser() {
     }
@@ -53,6 +55,14 @@ public class AppUser implements UserDetails {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     @Override

@@ -20,6 +20,16 @@ public class AppUserService{
         return appUsers;
     }
 
+    public AppUser findByUsername(String userName) {
+        AppUser user = appUserRepo.findByUsername(userName);
+        return user;
+    }
+
+    public List<AppUser> findAllByActive (boolean active){
+        List<AppUser> appUsers = appUserRepo.findAllByActive(active);
+        return appUsers;
+    }
+
 }
 
 

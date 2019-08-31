@@ -33,7 +33,7 @@ public class RegistrationGui extends VerticalLayout {
         this.passwordEncoder = passwordEncoder;
 
         buttonHello.addClickListener(click -> {
-            AppUser appUser = new AppUser(username.getValue(), passwordEncoder.encode(password.getValue()),"ROLE_USER");
+            AppUser appUser = new AppUser(username.getValue(), passwordEncoder.encode(password.getValue()),"ROLE_USER", false);
 
         appUserRepo.save(appUser);
             UI.getCurrent().navigate("main-menu");

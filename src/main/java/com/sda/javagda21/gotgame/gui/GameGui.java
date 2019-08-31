@@ -10,23 +10,15 @@ import com.sda.javagda21.gotgame.service.MapService;
 import com.sda.javagda21.gotgame.service.PlayerService;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.dependency.JavaScript;
-import com.vaadin.flow.component.dependency.StyleSheet;
-import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
-import com.vaadin.flow.dom.Style;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
-import com.vaadin.flow.shared.ui.LoadMode;
-import com.vaadin.flow.theme.Theme;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -190,10 +182,11 @@ public class GameGui extends VerticalLayout {
             UI.getCurrent().getPage().reload();
 
 //            TODO: dodatkowe okienko potwierdzające wybór
-//            TODO: kolorowanie labels
 //            TODO: login - blokowanie resources
 //            TODO: heroku
+//            TODO: chat
 //            TODO: CSS
+//            TODO: save do db
         });
         createNewGameButton.setText("Start New Game");
         createNewGameButton.setMinWidth("630px");
