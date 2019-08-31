@@ -7,7 +7,8 @@ Strategy game, victory requires above all thinking and planning skills. The game
 
 Link to the online application
 
-   [GIT](https://www.google.com)
+   [GIT](https://github.com/Prezez/gotgame)
+   
    [HEROKU](https://www.google.com)
    
 # User Documentation
