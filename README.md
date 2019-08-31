@@ -18,6 +18,7 @@ The user must register and log in to use the application.
 Example users are created with below credentials:
 
 UserName: Jan, Password: 123
+
 UserName: Jim, Password: 123
 
 # Screen:
