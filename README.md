@@ -31,7 +31,7 @@ Link to the online application
 
 # Authors
 
-    •	Dawid Procajło            [I'm an inline-style link](https://www.linkedin.com/in/damian-rybka-8269a868/)   
+    •	Dawid Procajło            [I'm an inline-style link](https://www.linkedin.com/in/damian-rybka-8269a868/)   a
     •	Katarzyna Zawisza         [I'm an inline-style link](https://www.google.com)  
     •	Tomasz Piotrowski        [I'm an inline-style link](https://www.google.com)
     •	Damian Rybka                [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
