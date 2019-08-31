@@ -10,7 +10,7 @@
 Link to the online application
 
    (https://www.google.com)
-
+    [I'm an inline-style link](https://www.google.com)
 
 # Technologies
 
