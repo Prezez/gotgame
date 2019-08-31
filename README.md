@@ -10,7 +10,7 @@
 Link to the online application
 
    (https://www.google.com)
-    [I'm an inline-style link](https://www.google.com)
+   
     (https://www.linkedin.com/in/damian-rybka-8269a868/)
 
 # Technologies
@@ -32,7 +32,7 @@ Link to the online application
 
 # Authors
 
-    •	Dawid Procajło            [I'm an inline-style link](https://www.linkedin.com/in/damian-rybka-8269a868/)   a
+    •	Dawid Procajło             (https://www.linkedin.com/in/damian-rybka-8269a868/)
     •	Katarzyna Zawisza         [I'm an inline-style link](https://www.google.com)  
     •	Tomasz Piotrowski        [I'm an inline-style link](https://www.google.com)
     •	Damian Rybka                [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
