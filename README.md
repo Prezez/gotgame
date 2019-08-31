@@ -1,4 +1,4 @@
-GOTGAME
+# GOTGAME
 
     A strategy game with chat. Victory requires above all thinking and planning skills. 
     The game highlights the challenges in terms of strategy and logistics. Gotgame is a student project. 
