@@ -13,11 +13,14 @@ Link to the online application
 # User Documentation
 The application is a strategy game. It is used for fun, but also dispels logical thinking. 
 An application designed for anyone without an age range.
+The user must register and log in to use the application.
 
-The first user logs in with the username _"Jan"_** and password _"123"_**
-The other user logs in with the username _"Jim"_** and password _"123"_**
-It is also possible to register for a new account.
+# Screen:
 
+<a href=https://zapodaj.net/843e5f20bba8f.jpg.html>sc1.jpg</a> 
+<a href=https://zapodaj.net/df0090d35c3b2.png.html>sc2.png</a> 
+<a href=https://zapodaj.net/7fd55447429f8.png.html>sc3.png</a>  
+			
 # Technologies
 
  Project is created with:
