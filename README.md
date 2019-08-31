@@ -31,10 +31,10 @@ Link to the online application
 
 # Authors
 
-    •	Dawid Procajło             
-    •	Katarzyna Zawisza           
-    •	Tomasz Piotrowski         
-    •	Damian Rybka         
+    •	Dawid Procajło            [I'm an inline-style link](https://www.linkedin.com/in/damian-rybka-8269a868/)   
+    •	Katarzyna Zawisza         [I'm an inline-style link](https://www.google.com)  
+    •	Tomasz Piotrowski         [I'm an inline-style link](https://www.google.com)
+    •	Damian Rybka              [LINKEDIN](https://www.linkedin.com/in/damian-rybka-8269a868/)
 
     •	supervision of : Przemysław Bykowski         
 
