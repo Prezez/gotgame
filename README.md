@@ -33,7 +33,7 @@ Link to the online application
 
     •	Dawid Procajło            [I'm an inline-style link](https://www.linkedin.com/in/damian-rybka-8269a868/)   
     •	Katarzyna Zawisza         [I'm an inline-style link](https://www.google.com)  
-    •	Tomasz Piotrowski         [I'm an inline-style link](https://www.google.com)
+    •	Tomasz Piotrowski        [I'm an inline-style link](https://www.google.com)
     •	Damian Rybka                (https://www.linkedin.com/in/damian-rybka-8269a868/)
 
     •	supervision of : Przemysław Bykowski         
