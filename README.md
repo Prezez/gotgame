@@ -37,7 +37,7 @@ Link to the online application
     •	Damian Rybka                (https://www.linkedin.com/in/damian-rybka-8269a868/)
 
     •	supervision of : Przemysław Bykowski         
-
+    [I'm an inline-style link](https://www.google.com)
 # Functionalities
 
     User registration - the client entering the gotgame application must change.
