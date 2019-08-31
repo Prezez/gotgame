@@ -68,8 +68,8 @@ public class WaitingRoomGui extends VerticalLayout {
             Thread.sleep(5000);
             UI.getCurrent().getPage().reload();
         } else {
-            String playerOne = users.get(0).getUsername();
-            String playerTwo = users.get(1).getUsername();
+            String playerOne = activeUsers.get(0).getUsername();
+            String playerTwo = activeUsers.get(1).getUsername();
             VaadinSession.getCurrent().getSession().setAttribute("playerOne", playerOne);
             VaadinSession.getCurrent().getSession().setAttribute("playerTwo", playerTwo);
             UI.getCurrent().navigate("game");
