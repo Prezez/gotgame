@@ -17,16 +17,26 @@ Link to the online application
 
  Project is created with:
     
-  • Java 8
+  •   Java 8
+  
   •	Spring
+  
   •	Maven
+  
   •	MySQL
+  
   •	Hibernate
+  
   •	Vaadin
+  
   •	Heroku
+  
   •	Github
+  
   •	Thymeleaf
+  
   •	HTML
+  
   •	CSS
     
 
