@@ -6,7 +6,7 @@
 
 Link to the online application
 
-   [I'm an inline-style link](https://www.google.com)
+   (https://www.google.com)
 
 
 Technologies
