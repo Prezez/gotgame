@@ -33,19 +33,20 @@ Link to the online application
 # Authors
 
    •	Katarzyna Zawisza   
-   (https://www.linkedin.com/in/katarzyna-zawisza-18998bba/)  
+   [LinkedIn](https://www.linkedin.com/in/katarzyna-zawisza-18998bba/)  
    
    •	Dawid Procajło               
-   (https://www.linkedin.com/in/dawid-procaj%C5%82o-a76697168/)
+   [LinkedIn](https://www.linkedin.com/in/dawid-procaj%C5%82o-a76697168/)
   
    •	Tomasz Piotrowski           
-   (https://www.linkedin.com/in/tomasz-piotrowski-088872156/)
+   [LinkedIn](https://www.linkedin.com/in/tomasz-piotrowski-088872156/)
    
    •  Damian Rybka                 (
-   https://www.linkedin.com/in/damian-rybka-8269a868/)
+   [LinkedIn]https://www.linkedin.com/in/damian-rybka-8269a868/)
    
      
-   •	Supervision of : Przemysław Bykowski   (https://www.linkedin.com/in/przemyslaw-bykowski/)      
+   •	Supervision of : Przemysław Bykowski   
+   [LinkedIn](https://www.linkedin.com/in/przemyslaw-bykowski/)      
 
 
 # Functionalities
