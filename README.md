@@ -35,7 +35,7 @@ Link to the online application
    •	Dawid Procajło            [LINKEDIN](https://www.linkedin.com/in/dawid-procaj%C5%82o-a76697168/)
    •	Katarzyna Zawisza         [LINKEDIN](https://www.linkedin.com/in/katarzyna-zawisza-18998bba/)  
    •	Tomasz Piotrowski         [LINKEDIN](https://www.linkedin.com/in/tomasz-piotrowski-088872156/)
-   •    Damian Rybka              [LINKEDIN](https://www.linkedin.com/in/damian-rybka-8269a868/)
+   •  Damian Rybka              [LINKEDIN](https://www.linkedin.com/in/damian-rybka-8269a868/)
      
    •	supervision of : Przemysław Bykowski   [LINKEDIN](https://www.linkedin.com/in/przemyslaw-bykowski/)      
 
