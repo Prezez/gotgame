@@ -1,3 +1,6 @@
+<a href=https://zapodaj.net/578f1ba5eca78.jpg.html>LOGO.jpg</a>
+
+
 # GOTGAME
 
     A strategy game with chat. Victory requires above all thinking and planning skills. 
