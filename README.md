@@ -1,10 +1,5 @@
-<a href=https://zapodaj.net/578f1ba5eca78.jpg.html>LOGO.jpg</a>
-
-![alt text](https://zapodaj.net/578f1ba5eca78.jpg.html "Logo Title Text 1")
-
-[url=https://zapodaj.net/578f1ba5eca78.jpg.html]https://zapodaj.net/578f1ba5eca78.jpg.html[/url]
-
 <a href=https://zapodaj.net/578f1ba5eca78.jpg.html><img src=https://zapodaj.net/images/578f1ba5eca78.jpg alt=hostowane przez Zapodaj.net /></a>
+
 
 # GOTGAME
 
